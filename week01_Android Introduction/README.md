@@ -1,17 +1,11 @@
-# Android Mobile App development
+# Simple Display by Click button
 
 ## Object
->* Familiarize all aspects of planning, developing and testing mobile applications for the Android platform. 
->* It emphasize the creation of applications using the Java programming language, as well as programming techniques for achieving effective interaction on mobile devices. 
->* Imprement mobile applications that feature location-awareness, messaging, Wi-Fi network access and multimedia will be introduced.
+>* Understand Android Studio configuration 
+>* Simple design for Text and Button display
+>* Print outputs in forms of TextView, Toast message, and Logcat
 
 ## Outline
-#### Android development platform
-* Development platform architecture
-    * Installing the Android ADT (Android Development Tools)
-    * Installing the Android SDK (Software Development Kit)
-    * Creating AVDs (Android Virtual Devices)
-* Using ADT tools from the command line.
-
-#### Activities, Intents, Fragments
-* Using styles and themes
+>* When the user enters userName/Password and click the button, the app displays welcome message.
+>* At the same time, user information (name ans password) is printed in logcat as well as in form of toast message.
+>* If user does not enter one of user information, the app ask user to enter the absent information using toast message.

@@ -1,4 +1,4 @@
-# Simple Display by Click button
+# Simple Display by Clicking button
 
 ## Object
 >* Understand Android Studio configuration 

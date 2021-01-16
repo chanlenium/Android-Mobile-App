@@ -11,4 +11,4 @@
 >* If user does not enter one of user information, the app ask user to enter the absent information using toast message.
 
 ## Screen Shots
-![](DemoScreenShot.png "screenshots")
+![](DemoScreenShot.png =100x20)

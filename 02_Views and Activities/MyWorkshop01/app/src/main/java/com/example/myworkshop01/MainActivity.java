@@ -55,13 +55,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String getFormattedMessage(String fName, String lName) {
-        StringBuilder messageBuilder = new StringBuilder();
-        messageBuilder.append(getString(R.string.hi_2));
-        messageBuilder.append(fName);
-        messageBuilder.append(" ");
-        messageBuilder.append(lName);
-
-        return messageBuilder.toString();
+        return String.format(getString(R.string.hi_message_format), fName, lName);
     }
 
     public void hideKeyboard() {

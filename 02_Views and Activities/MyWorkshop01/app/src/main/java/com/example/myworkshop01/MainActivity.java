@@ -3,6 +3,7 @@ package com.example.myworkshop01;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -11,45 +12,60 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
     // variable initialization
-    private TextView userInformation;
-    private EditText firstName, lastName;
-    private Button submit;
+    private TextView userInfoTv;
+    private EditText fisrtNameEt, lastNameEt;
+    private Button submitBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main); // Refer to Layout
-        userInformation = findViewById(R.id.userInfoTv);
-        userInformation.setText("Hi!");
-        firstName = findViewById(R.id.fisrtNameEt);
-        lastName = findViewById(R.id.lastNameEt);
-        submit = findViewById(R.id.submitBtn);
-        //final Button button = findViewById(R.id.submitBtn);
 
-        // To specify an action when the button is pressed, set a click listener on the button object
-        submit.setOnClickListener(new View.OnClickListener() {
+        initUI();
+    }
+
+    // UI View initialization
+    private void initUI() {
+        userInfoTv = findViewById(R.id.userInfoTv);
+        userInfoTv.setText(getString(R.string.hi_1));
+
+        fisrtNameEt = findViewById(R.id.fisrtNameEt);
+        lastNameEt = findViewById(R.id.lastNameEt);
+
+        submitBtn = findViewById(R.id.submitBtn);
+        submitBtn.setOnClickListener(new View.OnClickListener() {// To specify an action when the button is pressed, set a click listener on the button object
             public void onClick(View v) {
                 // display user Info when the user input is validated
-                if(validateInput(firstName, lastName)){
-                    userInformation.setText("Hi, " + firstName.getText().toString() + " " + lastName.getText().toString() + "!");
+                if (validateInput(fisrtNameEt.getText().toString(), lastNameEt.getText().toString())) {
+                    userInfoTv.setText(getFormattedMessage(fisrtNameEt.getText().toString(), lastNameEt.getText().toString()));
+
                     // print output in Logcat window (debug message)
-                    Log.d("USER_INFO", "First name is "+ firstName.getText().toString() + ", Last Name is " + lastName.getText().toString());
+                    Log.d("USER_INFO", "First name is "+ fisrtNameEt.getText().toString() + ", Last Name is " + lastNameEt.getText().toString());
                 }else{
-                    userInformation.setText("Hi, there !");
+                    userInfoTv.setText(getString(R.string.hi_there));
                 }
             }
         });
     }
 
-    private boolean validateInput(EditText fName, EditText lName){
-        // Input is Invalid only when both first and last name are empty
-        if(isEmpty(fName.getText().toString()) && isEmpty(lName.getText().toString()))
-            Toast.makeText(this, "Both first and last name are empty", Toast.LENGTH_SHORT).show();
-        return !(isEmpty(fName.getText().toString()) && isEmpty(lName.getText().toString()));
+    private String getFormattedMessage(String fName, String lName) {
+        StringBuilder messageBuilder = new StringBuilder();
+        messageBuilder.append(getString(R.string.hi_2));
+        messageBuilder.append(fName);
+        messageBuilder.append(" ");
+        messageBuilder.append(lName);
+
+        return messageBuilder.toString();
     }
 
-    private boolean isEmpty(String field) {
-        return (field.trim().length() == 0) ? true : false;
+    private boolean validateInput(String fName, String lName) {
+        // Input is Invalid only when both first and last name are empty
+        if (TextUtils.isEmpty(fName) && TextUtils.isEmpty(lName)) {
+            Toast.makeText(this, getString(R.string.empty_text_message), Toast.LENGTH_SHORT).show();
+        }
+        return !(TextUtils.isEmpty(fName) && TextUtils.isEmpty(lName));
     }
+
 }

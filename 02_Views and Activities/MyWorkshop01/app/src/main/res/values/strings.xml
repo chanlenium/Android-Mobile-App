@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">MyWorkshop01</string>
+
+    <string name="hi_0">Hi</string>
+    <string name="hi_1">Hi!</string>
+    <string name="hi_2">Hi,</string>
+    <string name="hi_there">Hi, there !</string>
+    <string name="empty_text_message">Both first and last name are empty</string>
+    <string name="submit">Submit</string>
+
+    <string name="user_information">User Information</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="enter_last_name">Enter last name</string>
+    <string name="enter_first_name">Enter first name</string>
+
+    <string name="input_digit">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+
 </resources>

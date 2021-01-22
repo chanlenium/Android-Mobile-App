@@ -11,6 +11,6 @@
 >* If user does not enter one of user information, the app ask user to enter the absent information using toast message.
 
 ## Screenshot
-<img src="https://github.com/chanlenium/Android-Mobile-App/blob/main/week01_Android%20Introduction/DemoScreenShot.png" width="600" height="300" />
+<img src="https://github.com/chanlenium/Android-Mobile-App/blob/main/01_Android%20Introduction/DemoScreenShot.png" width="600" height="300" />
 
 

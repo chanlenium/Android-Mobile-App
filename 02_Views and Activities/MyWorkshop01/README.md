@@ -14,6 +14,6 @@
 >* User is constrainted to input letters only in the text editor using `android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "`.
 
 ## Screenshot
-<img src="https://github.com/chanlenium/Android-Mobile-App/blob/main/01_Android%20Introduction/DemoScreenShot.png" width="600" height="300" />
+<img src="https://github.com/chanlenium/Android-Mobile-App/blob/main/02_Views%20and%20Activities/MyWorkshop01/screenshot.png" width="600" height="300" />
 
 

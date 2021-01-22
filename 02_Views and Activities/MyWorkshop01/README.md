@@ -1,5 +1,5 @@
 # Display welcome message
-> APK link : https://appetize.io/app/fpznkwakpkgtx8m63zrx59jr4c?device=nexus5&scale=75&orientation=portrait&osVersion=8.1
+> Demo link : https://appetize.io/app/fpznkwakpkgtx8m63zrx59jr4c?device=nexus5&scale=75&orientation=portrait&osVersion=8.1
 
 ## Object
 >* Understand Android Studio configuration 

@@ -1,11 +1,12 @@
 <resources>
     <string name="app_name">MyWorkshop01</string>
-
+    <!-- Text in activity_main.xml is moved to strings.xml
+    so that it is better to manage source code to support multi languages -->
     <string name="hi_0">Hi</string>
     <string name="hi_1">Hi!</string>
     <string name="hi_message_format">Hi, %s %s</string>
-    <string name="hi_there">Hi, there !</string>
-    <string name="empty_text_message">Both first and last name are empty</string>
+    <string name="hi_there">Hi, there!</string>
+    <string name="empty_text_message">Both first and last names are empty</string>
     <string name="submit">Submit</string>
 
     <string name="user_information">User Information</string>
@@ -14,6 +15,6 @@
     <string name="enter_last_name">Enter last name</string>
     <string name="enter_first_name">Enter first name</string>
 
-    <string name="input_digit">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="input_digit">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ </string>
 
 </resources>

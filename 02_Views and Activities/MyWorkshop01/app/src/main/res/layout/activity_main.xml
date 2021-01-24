@@ -43,7 +43,7 @@
         app:layout_constraintTop_toBottomOf="@+id/firstNameTv" />
 
     <EditText
-        android:id="@+id/fisrtNameEt"
+        android:id="@+id/firstNameEt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
@@ -70,7 +70,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toEndOf="@+id/lastNameTv"
-        app:layout_constraintTop_toBottomOf="@+id/fisrtNameEt" />
+        app:layout_constraintTop_toBottomOf="@+id/firstNameEt" />
 
     <Button
         android:id="@+id/submitBtn"

@@ -9,16 +9,18 @@
 
 ## Outline
 > Design UI interface using `relative layout`
-    > To set relatvie layout, `active_main.xml` is edited as
-    ```
+>> To set relatvie layout, `active_main.xml` is edited as
+>> ```
     <?xml version="1.0" encoding="utf-8"?>
     <!-- Set Relative Layout -->
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     ```
 
->* When the user input is validated, the app displays welcome message *"Hi, Last Fisrt name"* and prints user first/last name in *logcat*.
->* When the user input is invalid (i.e., both first and last nameas are empty), the app displays message *"Hi, there"* and sends *toast message*.
->* User is constrainted to input letters only in the text editor using `android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "`.
+> Use radio buttons for optional sets that are mutually exclusive (Must group them together inside a *RadioGroup*)
+> Use checkboxes to select one or more options from a set (Checkbox is managed separately and you must register a click listener for each)
+> To change color once clicking UI elements, *style* components are added in `style.xml` and refer it to each element
+> Using user selection information, the App displays *order detail* message
+>> If any elements are not selected, user is asked to select the unselected elements
 
 ## Screenshot
 <img src="https://github.com/chanlenium/Android-Mobile-App/blob/main/02_Views%20and%20Activities/MyWorkshop01/screenshot.png" width="600" height="300" />

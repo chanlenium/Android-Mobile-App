@@ -1,15 +1,15 @@
 # UI element application
-> Demo link : https://appetize.io/app/b0kxayw9qcu6jd0gbuyk514u74?device=pixel4&scale=75&orientation=portrait&osVersion=10.0
+* Demo link : https://appetize.io/app/b0kxayw9qcu6jd0gbuyk514u74?device=pixel4&scale=75&orientation=portrait&osVersion=10.0
 
 ## Objectives
-> Familiar with `Relative layout` 
-> Simple design UI elements `radiobutton`, `checkbox`
-> Cutomize UI elements by appying style
-> Print text message according to user selection (Handle & implement event listener)
+* Familiar with `Relative layout` 
+* Simple design UI elements `radiobutton`, `checkbox`
+* Cutomize UI elements by appying style
+* Print text message according to user selection (Handle & implement event listener)
 
 ## Outline
-> Design UI interface using `relative layout`
->> To set relatvie layout, `active_main.xml` is edited as
+* Design UI interface using `relative layout`
+    * To set relatvie layout, `active_main.xml` is edited as
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Set Relative Layout -->

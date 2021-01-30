@@ -10,9 +10,11 @@
 ## Outline
 > Design UI interface using `relative layout`
 >> To set relatvie layout, `active_main.xml` is edited as
->> ```<?xml version="1.0" encoding="utf-8"?>
-    <!-- Set Relative Layout -->
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"```
+```
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Set Relative Layout -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+```
 
 > Use radio buttons for optional sets that are mutually exclusive (Must group them together inside a *RadioGroup*)
 > Use checkboxes to select one or more options from a set (Checkbox is managed separately and you must register a click listener for each)

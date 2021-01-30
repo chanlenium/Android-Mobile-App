@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">UIelements</string>
+
+    <string name="yesRadioBtn">Yes</string>
+    <string name="noRadioBtn">No</string>
+    <string name="maybeRadioBtn">Maybe</string>
+    <string name="greenCheckBox">Green</string>
+    <string name="redCheckBox">Red</string>
+    <string name="blackCheckBox">Black</string>
+    <string name="toggleOn">Click to Hide</string>
+    <string name="toggleOff">Click to Show</string>
+
+
+</resources>

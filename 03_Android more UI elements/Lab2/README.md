@@ -38,7 +38,7 @@
     * If any elements are not selected, user is asked to select the unselected elements
 
 ## Screenshot
-<img src="https://github.com/chanlenium/Android-Mobile-App/blob/main/02_Views%20and%20Activities/MyWorkshop01/screenshot.png" width="600" height="300" />
+<img src="https://github.com/chanlenium/Android-Mobile-App/blob/main/03_Android%20more%20UI%20elements/Lab2/Screenshots.png" width="600" height="350" />
 
 
  

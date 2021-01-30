@@ -21,18 +21,19 @@
 * To change color once clicking UI elements, *style* components are added in `themes.xml` and refer it to each element
 ```
 <style name="RadioButtonStyle" parent="Theme.AppCompat.DayNight">
-        <!-- Selected radiobutton color -->
-        <item name="colorAccent">@android:color/holo_red_light</item>
-        <!-- Default radiobutton color -->
-        <item name="android:textColorPrimary">@android:color/darker_gray</item>
-    </style>
+    <!-- Selected radiobutton color -->
+    <item name="colorAccent">@android:color/holo_red_light</item>
+    <!-- Default radiobutton color -->
+    <item name="android:textColorPrimary">@android:color/darker_gray</item>
+</style>
 
-    <style name="colored_CheckBox" parent="Theme.AppCompat.DayNight">
-        <!-- Selected checkbox color -->
-        <item name="colorAccent">@android:color/holo_red_light</item>
-        <!-- Selected checkbox color -->
-        <item name="android:textColorPrimary">@android:color/darker_gray</item>
-    </style>```
+<style name="colored_CheckBox" parent="Theme.AppCompat.DayNight">
+    <!-- Selected checkbox color -->
+    <item name="colorAccent">@android:color/holo_red_light</item>
+    <!-- Selected checkbox color -->
+    <item name="android:textColorPrimary">@android:color/darker_gray</item>
+</style>
+```
 * Using user selection information, the App displays *order detail* message
     * If any elements are not selected, user is asked to select the unselected elements
 

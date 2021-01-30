@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Lab2</string>
+
+    <string name="titleTV">Pizza Order</string>
+
+    <string name="sizeTV">Size</string>
+    <string name="sizeMRadioBtn">Medium</string>
+    <string name="sizeLRadioBtn">Large</string>
+    <string name="sizeSRadioBtn">Small</string>
+
+    <string name="toppingsTV">Toppings</string>
+    <string name="toppingPepperoniCBox">Pepperoni</string>
+    <string name="toppingGreenCBox">Green Pepper</string>
+    <string name="toppingOnionCBox">Onion</string>
+
+    <string name="orderTypeTV">Order type</string>
+    <string name="orderPickupRadioBtn">Pick up</string>
+    <string name="orderDeliveryRadioBtn">Delivery</string>
+
+    <string name="placeOrderBtn">Place the Order</string>
+
+    <string name="hi">Hi!</string>
+
+</resources>

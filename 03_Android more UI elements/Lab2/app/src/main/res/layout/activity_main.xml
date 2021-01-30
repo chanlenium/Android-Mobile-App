@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Set Relative Layout -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleTV"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:text="@string/titleTV"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sizeTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/sizeTV"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="115dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/sizeMRadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onSizeRadioBtnClicked"
+            android:theme="@style/RadioButtonStyle"
+            android:text="@string/sizeMRadioBtn"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/sizeLRadioBtn"
+            android:layout_width="114dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onSizeRadioBtnClicked"
+            android:theme="@style/RadioButtonStyle"
+            android:text="@string/sizeLRadioBtn"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/sizeSRadioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onSizeRadioBtnClicked"
+            android:theme="@style/RadioButtonStyle"
+            android:text="@string/sizeSRadioBtn"
+            android:textSize="24sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/toppingsTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="190dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/toppingsTV"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/toppingPepperoniCBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="240dp"
+        android:onClick="onCheckboxClicked"
+        android:theme="@style/colored_CheckBox"
+        android:text="@string/toppingPepperoniCBox"
+        android:textSize="24sp"
+        />
+
+    <CheckBox
+        android:id="@+id/toppingGreenCBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="290dp"
+        android:onClick="onCheckboxClicked"
+        android:theme="@style/colored_CheckBox"
+        android:text="@string/toppingGreenCBox"
+        android:textSize="24sp" />
+
+    <CheckBox
+        android:id="@+id/toppingOnionCBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="335dp"
+        android:layout_marginEnd="10dp"
+        android:onClick="onCheckboxClicked"
+        android:theme="@style/colored_CheckBox"
+        android:text="@string/toppingOnionCBox"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/orderTypeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="410dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/orderTypeTV"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="450dp" >
+
+        <RadioButton
+            android:id="@+id/orderPickupRadioBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:onClick="onOrderRadioBtnClicked"
+            android:theme="@style/RadioButtonStyle"
+            android:text="@string/orderPickupRadioBtn"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/orderDeliveryRadioBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:onClick="onOrderRadioBtnClicked"
+            android:theme="@style/RadioButtonStyle"
+            android:text="@string/orderDeliveryRadioBtn"
+            android:textSize="24sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/placeOrderBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="80dp"
+        android:onClick="displayOrderDetail"
+        android:text="@string/placeOrderBtn"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/orderDetailTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp" />
+
+</RelativeLayout>

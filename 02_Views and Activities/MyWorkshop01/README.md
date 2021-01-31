@@ -1,7 +1,7 @@
 # Display welcome message
 > Demo link : https://appetize.io/app/fpznkwakpkgtx8m63zrx59jr4c?device=nexus5&scale=75&orientation=portrait&osVersion=8.1
 
-## Object
+## Objective
 >* Understand Android Studio configuration 
 >* Simple design for Text and Button display
 >* Validate input (Empty or not)

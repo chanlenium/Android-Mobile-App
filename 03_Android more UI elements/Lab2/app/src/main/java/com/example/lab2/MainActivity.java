@@ -4,19 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    TextView orderDetail;
-    Button placeOrderBtn;
-    boolean isToppingPepperoni, isToppingGreen, isToppingOnion; // variable to indicate topping is selected or not
-    boolean sizeChecked, toppingChecked, orderTypeChecked;
-    String selectedSize;    // String to store which size option is selected
-    String selectedOrderType;
-    String toppingSelection;    // String to describe selected toppings
+
+    private TextView orderDetail;
+
+    private boolean isToppingPepperoni, isToppingGreen, isToppingOnion; // variable to indicate topping is selected or not
+    private boolean sizeChecked, orderTypeChecked;
+    private String selectedSize;    // String to store which size option is selected
+    private String selectedOrderType;
+    private String toppingSelection;    // String to describe selected toppings
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
     private void UIinit(){  // UI initialization function
         orderDetail = findViewById(R.id.orderDetailTV);
         orderDetail.setText(getString(R.string.hi));
-        placeOrderBtn = findViewById(R.id.placeOrderBtn);
     }
 
     public void onSizeRadioBtnClicked(View view) {  // In here, view is radio button
@@ -55,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onCheckboxClicked(View view) {
         // Is the view now checked?
-        toppingChecked = ((CheckBox) view).isChecked(); // "True" only if the box is checked, not unchecked
+        Boolean toppingChecked = ((CheckBox) view).isChecked(); // "True" only if the box is checked, not unchecked
         // Even checkbox is clicked, if the click is for unchecked, the value is "false"
 
         // Check which checkbox was clicked
@@ -76,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         displaySelection();
     }
 
-    void displaySelection(){    // function to identify which topping is selected
+    public void displaySelection(){    // function to identify which topping is selected
         toppingSelection = "";
         if(isToppingPepperoni){
             toppingSelection += getString(R.string.toppingPepperoniCBox);

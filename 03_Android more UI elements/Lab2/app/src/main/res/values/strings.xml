@@ -4,14 +4,14 @@
     <string name="titleTV">Pizza Order</string>
 
     <string name="sizeTV">Size</string>
-    <string name="sizeMRadioBtn">Medium</string>
-    <string name="sizeLRadioBtn">Large</string>
-    <string name="sizeSRadioBtn">Small</string>
+    <string name="sizeMedium">Medium</string>
+    <string name="sizeLarge">Large</string>
+    <string name="sizeSmall">Small</string>
 
     <string name="toppingsTV">Toppings</string>
-    <string name="toppingPepperoniCBox">Pepperoni</string>
-    <string name="toppingGreenCBox">Green Pepper</string>
-    <string name="toppingOnionCBox">Onion</string>
+    <string name="toppingPepperoni">Pepperoni</string>
+    <string name="toppingGreenPepper">Green Pepper</string>
+    <string name="toppingOnion">Onion</string>
 
     <string name="orderTypeTV">Order type</string>
     <string name="orderPickupRadioBtn">Pick up</string>

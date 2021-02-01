@@ -49,7 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onSizeRadioBtnClicked"
-            android:text="@string/sizeMRadioBtn"
+            android:text="@string/sizeMedium"
             android:textSize="24sp"
             android:theme="@style/RadioButtonStyle" />
 
@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onSizeRadioBtnClicked"
-            android:text="@string/sizeLRadioBtn"
+            android:text="@string/sizeLarge"
             android:textSize="24sp"
             android:theme="@style/RadioButtonStyle" />
 
@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onSizeRadioBtnClicked"
-            android:text="@string/sizeSRadioBtn"
+            android:text="@string/sizeSmall"
             android:textSize="24sp"
             android:theme="@style/RadioButtonStyle" />
     </RadioGroup>
@@ -93,7 +93,7 @@
         android:layout_marginTop="240dp"
         android:onClick="onCheckboxClicked"
         android:theme="@style/colored_CheckBox"
-        android:text="@string/toppingPepperoniCBox"
+        android:text="@string/toppingPepperoni"
         android:textSize="24sp"/>
 
     <CheckBox
@@ -104,7 +104,7 @@
         android:layout_marginTop="290dp"
         android:onClick="onCheckboxClicked"
         android:theme="@style/colored_CheckBox"
-        android:text="@string/toppingGreenCBox"
+        android:text="@string/toppingGreenPepper"
         android:textSize="24sp" />
 
     <CheckBox
@@ -116,7 +116,7 @@
         android:layout_marginEnd="10dp"
         android:onClick="onCheckboxClicked"
         android:theme="@style/colored_CheckBox"
-        android:text="@string/toppingOnionCBox"
+        android:text="@string/toppingOnion"
         android:textSize="24sp" />
 
     <TextView

@@ -3,6 +3,7 @@ package com.example.lab2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
@@ -38,17 +39,17 @@ public class MainActivity extends AppCompatActivity {
         switch(view.getId()) {
             case R.id.sizeLRadioBtn:
                 if (sizeChecked) {
-                    selectedSize = getString(R.string.sizeLRadioBtn);
+                    selectedSize = getString(R.string.sizeLarge);
                     break;
                 }
             case R.id.sizeMRadioBtn:
                 if (sizeChecked) {
-                    selectedSize = getString(R.string.sizeMRadioBtn);
+                    selectedSize = getString(R.string.sizeMedium);
                     break;
                 }
             case R.id.sizeSRadioBtn:
                 if (sizeChecked)
-                    selectedSize = getString(R.string.sizeSRadioBtn);
+                    selectedSize = getString(R.string.sizeSmall);
         }
     }
 
@@ -77,16 +78,23 @@ public class MainActivity extends AppCompatActivity {
 
     public void displaySelection(){    // function to identify which topping is selected
         toppingSelection = "";
-        if(isToppingPepperoni){
-            toppingSelection += getString(R.string.toppingPepperoniCBox);
-            toppingSelection = (isToppingGreen) ? toppingSelection + ", " + getString(R.string.toppingGreenCBox) : toppingSelection;
-            toppingSelection = (isToppingOnion) ? toppingSelection + ", " + getString(R.string.toppingOnionCBox) : toppingSelection;
-        }else{
-            if(isToppingGreen) {
-                toppingSelection += getString(R.string.toppingGreenCBox);
-                toppingSelection = (isToppingOnion) ? toppingSelection + ", " + getString(R.string.toppingOnionCBox) : toppingSelection;
-            }else
-                toppingSelection = (isToppingOnion) ? toppingSelection + getString(R.string.toppingOnionCBox) : toppingSelection;
+
+        if (isToppingPepperoni){
+            toppingSelection += getString(R.string.toppingPepperoni);
+        }
+
+        if (isToppingGreen) {
+            if (!TextUtils.isEmpty(toppingSelection)) {
+                toppingSelection += ", ";
+            }
+            toppingSelection += getString(R.string.toppingGreenPepper);
+        }
+
+        if (isToppingOnion) {
+            if (!TextUtils.isEmpty(toppingSelection)) {
+                toppingSelection += ", ";
+            }
+            toppingSelection += getString(R.string.toppingOnion);
         }
     }
 

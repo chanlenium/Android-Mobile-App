@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
     private boolean isToppingPepperoni, isToppingGreen, isToppingOnion; // variable to indicate topping is selected or not
     private String selectedSize;    // String to store which size option is selected
     private String selectedOrderType;
-    private String toppingSelection;    // String to describe selected toppings
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,11 +72,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.toppingOnionCBox:
                 isToppingOnion = toppingChecked;
         }
-        displaySelection();
     }
 
-    public void displaySelection(){    // function to identify which topping is selected
-        toppingSelection = "";
+    public String displaySelection() {    // function to identify which topping is selected
+        String toppingSelection = "";
 
         if (isToppingPepperoni){
             toppingSelection += getString(R.string.toppingPepperoni);
@@ -96,6 +94,8 @@ public class MainActivity extends AppCompatActivity {
             }
             toppingSelection += getString(R.string.toppingOnion);
         }
+
+        return toppingSelection;
     }
 
     public void onOrderRadioBtnClicked(View view) {
@@ -118,14 +118,14 @@ public class MainActivity extends AppCompatActivity {
         if (TextUtils.isEmpty(selectedSize)) {
             orderDetail.setText(String.format("Please select %s", getString(R.string.sizeTV)));
 
-        } else if (TextUtils.isEmpty(toppingSelection)) {
+        } else if (TextUtils.isEmpty(displaySelection())) {
             orderDetail.setText(String.format("Please select %s", getString(R.string.toppingsTV)));
 
         } else if (TextUtils.isEmpty(selectedOrderType)) {
             orderDetail.setText(String.format("Please select %s", getString(R.string.orderTypeTV)));
 
         } else {
-            orderDetail.setText(String.format("%s Pizza with %s\nOrder type %s", selectedSize, toppingSelection, selectedOrderType));
+            orderDetail.setText(String.format("%s Pizza with %s\nOrder type %s", selectedSize, displaySelection(), selectedOrderType));
         }
     }
 

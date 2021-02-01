@@ -22,10 +22,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        UIinit();   // call UI initialization function
+        uIinit();   // call UI initialization function
     }
 
-    private void UIinit(){  // UI initialization function
+    private void uIinit(){  // UI initialization function
         orderDetail = findViewById(R.id.orderDetailTV);
         orderDetail.setText(getString(R.string.hi));
     }

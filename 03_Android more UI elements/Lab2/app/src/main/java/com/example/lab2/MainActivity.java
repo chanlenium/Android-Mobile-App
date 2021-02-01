@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
     private TextView orderDetail;
 
     private boolean isToppingPepperoni, isToppingGreen, isToppingOnion; // variable to indicate topping is selected or not
-    private boolean sizeChecked, orderTypeChecked;
     private String selectedSize;    // String to store which size option is selected
     private String selectedOrderType;
     private String toppingSelection;    // String to describe selected toppings
@@ -33,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onSizeRadioBtnClicked(View view) {  // In here, view is radio button
         // Is the button now checked?
-        sizeChecked = ((RadioButton) view).isChecked(); // "True" only if the button is clicked
+        boolean sizeChecked = ((RadioButton) view).isChecked(); // "True" only if the button is clicked
 
         // Check which radio button was clicked
         switch(view.getId()) {
@@ -48,8 +47,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 }
             case R.id.sizeSRadioBtn:
-                if (sizeChecked)
+                if (sizeChecked) {
                     selectedSize = getString(R.string.sizeSmall);
+                }
         }
     }
 
@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onOrderRadioBtnClicked(View view) {
         // Is the button now checked?
-        orderTypeChecked = ((RadioButton) view).isChecked();
+        boolean orderTypeChecked = ((RadioButton) view).isChecked();
         // Check which radio button was clicked
         switch(view.getId()) {
             case R.id.orderPickupRadioBtn:
@@ -115,18 +115,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void displayOrderDetail(View view) { // called when click "Place the Order" button
-        if(sizeChecked){
-            if(toppingSelection.length() > 0){
-                if(orderTypeChecked){
-                    orderDetail.setText(String.format("%s Pizza with %s\nOrder type %s", selectedSize, toppingSelection, selectedOrderType));
-                }else{
-                    orderDetail.setText(String.format("Please select %s", getString(R.string.orderTypeTV)));
-                }
-            }else{
-                orderDetail.setText(String.format("Please select %s", getString(R.string.toppingsTV)));
-            }
-        }else{
+        if (TextUtils.isEmpty(selectedSize)) {
             orderDetail.setText(String.format("Please select %s", getString(R.string.sizeTV)));
+
+        } else if (TextUtils.isEmpty(toppingSelection)) {
+            orderDetail.setText(String.format("Please select %s", getString(R.string.toppingsTV)));
+
+        } else if (TextUtils.isEmpty(selectedOrderType)) {
+            orderDetail.setText(String.format("Please select %s", getString(R.string.orderTypeTV)));
+
+        } else {
+            orderDetail.setText(String.format("%s Pizza with %s\nOrder type %s", selectedSize, toppingSelection, selectedOrderType));
         }
+
     }
+
+
 }

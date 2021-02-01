@@ -22,10 +22,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        uIinit();   // call UI initialization function
+        uiInit();   // call UI initialization function
     }
 
-    private void uIinit(){  // UI initialization function
+    private void uiInit(){  // UI initialization function
         orderDetail = findViewById(R.id.orderDetailTV);
         orderDetail.setText(getString(R.string.hi));
     }
@@ -127,8 +127,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             orderDetail.setText(String.format("%s Pizza with %s\nOrder type %s", selectedSize, toppingSelection, selectedOrderType));
         }
-
     }
-
 
 }

@@ -36,10 +36,10 @@
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/sizeTV"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="115dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="10dp"
         android:orientation="horizontal">
 
@@ -49,9 +49,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onSizeRadioBtnClicked"
-            android:theme="@style/RadioButtonStyle"
-            android:text="@string/sizeMRadioBtn"
-            android:textSize="24sp" />
+            android:text="@string/sizeMedium"
+            android:textSize="24sp"
+            android:theme="@style/RadioButtonStyle" />
 
         <RadioButton
             android:id="@+id/sizeLRadioBtn"
@@ -59,9 +59,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onSizeRadioBtnClicked"
-            android:theme="@style/RadioButtonStyle"
-            android:text="@string/sizeLRadioBtn"
-            android:textSize="24sp" />
+            android:text="@string/sizeLarge"
+            android:textSize="24sp"
+            android:theme="@style/RadioButtonStyle" />
 
         <RadioButton
             android:id="@+id/sizeSRadioBtn"
@@ -69,9 +69,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onSizeRadioBtnClicked"
-            android:theme="@style/RadioButtonStyle"
-            android:text="@string/sizeSRadioBtn"
-            android:textSize="24sp" />
+            android:text="@string/sizeSmall"
+            android:textSize="24sp"
+            android:theme="@style/RadioButtonStyle" />
     </RadioGroup>
 
     <TextView
@@ -93,9 +93,8 @@
         android:layout_marginTop="240dp"
         android:onClick="onCheckboxClicked"
         android:theme="@style/colored_CheckBox"
-        android:text="@string/toppingPepperoniCBox"
-        android:textSize="24sp"
-        />
+        android:text="@string/toppingPepperoni"
+        android:textSize="24sp"/>
 
     <CheckBox
         android:id="@+id/toppingGreenCBox"
@@ -105,7 +104,7 @@
         android:layout_marginTop="290dp"
         android:onClick="onCheckboxClicked"
         android:theme="@style/colored_CheckBox"
-        android:text="@string/toppingGreenCBox"
+        android:text="@string/toppingGreenPepper"
         android:textSize="24sp" />
 
     <CheckBox
@@ -117,7 +116,7 @@
         android:layout_marginEnd="10dp"
         android:onClick="onCheckboxClicked"
         android:theme="@style/colored_CheckBox"
-        android:text="@string/toppingOnionCBox"
+        android:text="@string/toppingOnion"
         android:textSize="24sp" />
 
     <TextView

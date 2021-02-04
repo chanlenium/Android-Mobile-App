@@ -3,59 +3,58 @@ package com.example.lab2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    TextView orderDetail;
-    Button placeOrderBtn;
-    boolean isToppingPepperoni, isToppingGreen, isToppingOnion; // variable to indicate topping is selected or not
-    boolean sizeChecked, toppingChecked, orderTypeChecked;
-    String selectedSize;    // String to store which size option is selected
-    String selectedOrderType;
-    String toppingSelection;    // String to describe selected toppings
+
+    private TextView orderDetail;
+
+    private boolean isToppingPepperoni, isToppingGreen, isToppingOnion; // variable to indicate topping is selected or not
+    private String selectedSize;    // String to store which size option is selected
+    private String selectedOrderType;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        UIinit();   // call UI initialization function
+        uiInit();   // call UI initialization function
     }
 
-    private void UIinit(){  // UI initialization function
+    private void uiInit(){  // UI initialization function
         orderDetail = findViewById(R.id.orderDetailTV);
         orderDetail.setText(getString(R.string.hi));
-        placeOrderBtn = findViewById(R.id.placeOrderBtn);
     }
 
     public void onSizeRadioBtnClicked(View view) {  // In here, view is radio button
         // Is the button now checked?
-        sizeChecked = ((RadioButton) view).isChecked(); // "True" only if the button is clicked
+        boolean sizeChecked = ((RadioButton) view).isChecked(); // "True" only if the button is clicked
 
         // Check which radio button was clicked
         switch(view.getId()) {
             case R.id.sizeLRadioBtn:
                 if (sizeChecked) {
-                    selectedSize = getString(R.string.sizeLRadioBtn);
+                    selectedSize = getString(R.string.sizeLarge);
                     break;
                 }
             case R.id.sizeMRadioBtn:
                 if (sizeChecked) {
-                    selectedSize = getString(R.string.sizeMRadioBtn);
+                    selectedSize = getString(R.string.sizeMedium);
                     break;
                 }
             case R.id.sizeSRadioBtn:
-                if (sizeChecked)
-                    selectedSize = getString(R.string.sizeSRadioBtn);
+                if (sizeChecked) {
+                    selectedSize = getString(R.string.sizeSmall);
+                }
         }
     }
 
     public void onCheckboxClicked(View view) {
         // Is the view now checked?
-        toppingChecked = ((CheckBox) view).isChecked(); // "True" only if the box is checked, not unchecked
+        Boolean toppingChecked = ((CheckBox) view).isChecked(); // "True" only if the box is checked, not unchecked
         // Even checkbox is clicked, if the click is for unchecked, the value is "false"
 
         // Check which checkbox was clicked
@@ -73,27 +72,34 @@ public class MainActivity extends AppCompatActivity {
             case R.id.toppingOnionCBox:
                 isToppingOnion = toppingChecked;
         }
-        displaySelection();
     }
 
-    void displaySelection(){    // function to identify which topping is selected
-        toppingSelection = "";
-        if(isToppingPepperoni){
-            toppingSelection += getString(R.string.toppingPepperoniCBox);
-            toppingSelection = (isToppingGreen) ? toppingSelection + ", " + getString(R.string.toppingGreenCBox) : toppingSelection;
-            toppingSelection = (isToppingOnion) ? toppingSelection + ", " + getString(R.string.toppingOnionCBox) : toppingSelection;
-        }else{
-            if(isToppingGreen) {
-                toppingSelection += getString(R.string.toppingGreenCBox);
-                toppingSelection = (isToppingOnion) ? toppingSelection + ", " + getString(R.string.toppingOnionCBox) : toppingSelection;
-            }else
-                toppingSelection = (isToppingOnion) ? toppingSelection + getString(R.string.toppingOnionCBox) : toppingSelection;
+    public String displaySelection() {    // function to identify which topping is selected
+        String toppingSelection = "";
+
+        if (isToppingPepperoni){
+            toppingSelection += getString(R.string.toppingPepperoni);
         }
+
+        if (isToppingGreen) {
+            if (!TextUtils.isEmpty(toppingSelection)) {
+                toppingSelection += ", ";
+            }
+            toppingSelection += getString(R.string.toppingGreenPepper);
+        }
+
+        if (isToppingOnion) {
+            if (!TextUtils.isEmpty(toppingSelection)) {
+                toppingSelection += ", ";
+            }
+            toppingSelection += getString(R.string.toppingOnion);
+        }
+        return toppingSelection;
     }
 
     public void onOrderRadioBtnClicked(View view) {
         // Is the button now checked?
-        orderTypeChecked = ((RadioButton) view).isChecked();
+        boolean orderTypeChecked = ((RadioButton) view).isChecked();
         // Check which radio button was clicked
         switch(view.getId()) {
             case R.id.orderPickupRadioBtn:
@@ -108,18 +114,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void displayOrderDetail(View view) { // called when click "Place the Order" button
-        if(sizeChecked){
-            if(toppingSelection.length() > 0){
-                if(orderTypeChecked){
-                    orderDetail.setText(String.format("%s Pizza with %s\nOrder type %s", selectedSize, toppingSelection, selectedOrderType));
-                }else{
-                    orderDetail.setText(String.format("Please select %s", getString(R.string.orderTypeTV)));
-                }
-            }else{
-                orderDetail.setText(String.format("Please select %s", getString(R.string.toppingsTV)));
-            }
-        }else{
+        if (TextUtils.isEmpty(selectedSize)) {  // TextUtils.isEmpty(field) : check "field" is empty or not
             orderDetail.setText(String.format("Please select %s", getString(R.string.sizeTV)));
+        } else if (TextUtils.isEmpty(displaySelection())) {
+            orderDetail.setText(String.format("Please select %s", getString(R.string.toppingsTV)));
+        } else if (TextUtils.isEmpty(selectedOrderType)) {
+            orderDetail.setText(String.format("Please select %s", getString(R.string.orderTypeTV)));
+        } else {
+            orderDetail.setText(String.format("%s Pizza with %s\nOrder type %s", selectedSize, displaySelection(), selectedOrderType));
         }
     }
+
 }

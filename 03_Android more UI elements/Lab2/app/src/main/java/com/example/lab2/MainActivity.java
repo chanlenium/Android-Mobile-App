@@ -94,7 +94,6 @@ public class MainActivity extends AppCompatActivity {
             }
             toppingSelection += getString(R.string.toppingOnion);
         }
-
         return toppingSelection;
     }
 
@@ -115,15 +114,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void displayOrderDetail(View view) { // called when click "Place the Order" button
-        if (TextUtils.isEmpty(selectedSize)) {
+        if (TextUtils.isEmpty(selectedSize)) {  // TextUtils.isEmpty(field) : check "field" is empty or not
             orderDetail.setText(String.format("Please select %s", getString(R.string.sizeTV)));
-
         } else if (TextUtils.isEmpty(displaySelection())) {
             orderDetail.setText(String.format("Please select %s", getString(R.string.toppingsTV)));
-
         } else if (TextUtils.isEmpty(selectedOrderType)) {
             orderDetail.setText(String.format("Please select %s", getString(R.string.orderTypeTV)));
-
         } else {
             orderDetail.setText(String.format("%s Pizza with %s\nOrder type %s", selectedSize, displaySelection(), selectedOrderType));
         }

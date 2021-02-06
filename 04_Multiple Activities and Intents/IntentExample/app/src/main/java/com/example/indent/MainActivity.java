@@ -15,6 +15,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.Serializable;
+
 public class MainActivity extends AppCompatActivity {
     private EditText nameEt;
     private TextView ageTv;
@@ -33,8 +35,12 @@ public class MainActivity extends AppCompatActivity {
         // Generate Intent object
         Intent intent = new Intent(this, SecondActivity.class);
         // Pass the nameEt value to the secondActivity
-        intent.putExtra("name", nameEt.getText().toString());
+        intent.putExtra("name", nameEt.getText().toString());   // pass key/value pair information
+
+        User user = new User(nameEt.getText().toString(), 20, "dcoh@myseneca.ca"); // Initialize using constructor
+        intent.putExtra("user", (Serializable)user);
         startActivity(intent);
+        // When clicking button current activity is on background
     }
 
     /*

@@ -64,4 +64,4 @@ private void displayTotal(double total) {
 ```
 
 ## Screenshot
-<img src="https://github.com/chanlenium/Android-Mobile-App/blob/main/03_Android%20more%20UI%20elements/Lab2/Screenshots.png" width="600" height="350" />
+<img src="https://github.com/chanlenium/Android-Mobile-App/blob/main/04_Multiple%20Activities%20and%20Intents/Assignment01/Screenshots.png" width="900" height="350" />

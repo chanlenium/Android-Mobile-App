@@ -1,5 +1,5 @@
 ## Virtual food and drink order App
-* Demo link : https://appetize.io/app/b0kxayw9qcu6jd0gbuyk514u74?device=pixel4&scale=75&orientation=portrait&osVersion=10.0
+* Demo link : https://appetize.io/app/24630m27hpejqxhzn2wytx4uec?device=pixel4&scale=75&orientation=portrait&osVersion=10.0
 
 ## Objectives
 * Using `Intent` to pass and feedback message between Activities.

@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">OrderFoodandDrink</string>
+
+    <string name="main_title">Find and Drink Ordering App</string>
+    <string name="main_button">CLICK HERE TO START</string>
+    <string name="main_name">Dongchan Oh</string>
+
+    <string name="foodSelect">Select your Food</string>
+    <string name="foodMenu1">Fish ($12)</string>
+    <string name="foodMenu2">Chicken ($11)</string>
+    <string name="foodMenu3">Roasted Veggies ($10)</string>
+    <string name="foodMenu4">Grilled Steak ($15)</string>
+    <string name="drinkSelect">Select your Drink</string>
+    <string name="drinkMenu1">Tea ($1.7)</string>
+    <string name="drinkMenu2">Coffee ($1.8)</string>
+    <string name="drinkMenu3">Orange Juice ($2.0)</string>
+    <string name="drinkMenu4">Apple Juice ($3.0)</string>
+    <string name="checkoutBtn">Check out</string>
+
+    <string name="summaryTitle">Summary Page</string>
+    <string name="summaryTotal">Total</string>
+    <string name="summaryEditOrderBtn">Edit order</string>
+    <string name="summarySumbit">Submit</string>
+
+
+</resources>

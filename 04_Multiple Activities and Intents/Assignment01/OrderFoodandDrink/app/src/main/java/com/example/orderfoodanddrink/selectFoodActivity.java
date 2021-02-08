@@ -112,16 +112,36 @@ public class selectFoodActivity extends AppCompatActivity {
         // Check which radio button was clicked
         switch(view.getId()) {
             case R.id.teaRbtn:
-                drinkList.get(0).setChecked(checked);
+                for(int i = 0; i < drinkList.size(); i++){
+                    if(i == 0)
+                        drinkList.get(i).setChecked(checked);
+                    else
+                        drinkList.get(i).setChecked(!checked);
+                }
                 break;
             case R.id.coffeeRbtn:
-                drinkList.get(1).setChecked(checked);
+                for(int i = 0; i < drinkList.size(); i++){
+                    if(i == 1)
+                        drinkList.get(i).setChecked(checked);
+                    else
+                        drinkList.get(i).setChecked(!checked);
+                }
                 break;
             case R.id.orangeJuiceRbtn:
-                drinkList.get(2).setChecked(checked);
+                for(int i = 0; i < drinkList.size(); i++){
+                    if(i == 2)
+                        drinkList.get(i).setChecked(checked);
+                    else
+                        drinkList.get(i).setChecked(!checked);
+                }
                 break;
             case R.id.appleJuiceRbtn:
-                drinkList.get(3).setChecked(checked);
+                for(int i = 0; i < drinkList.size(); i++){
+                    if(i == 3)
+                        drinkList.get(i).setChecked(checked);
+                    else
+                        drinkList.get(i).setChecked(!checked);
+                }
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + view.getId());

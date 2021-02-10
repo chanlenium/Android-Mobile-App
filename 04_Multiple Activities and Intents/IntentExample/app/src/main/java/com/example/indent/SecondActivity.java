@@ -21,14 +21,20 @@ public class SecondActivity extends AppCompatActivity {
 
         // 2. get data from the intent using name tag
         if(intent != null){
-            String name = intent.getStringExtra("name");
-            User user = (User) intent.getSerializableExtra("user");
+            if (intent.hasExtra("name")) {
+                String name = intent.getStringExtra("name");
+                Toast.makeText(this, name, Toast.LENGTH_SHORT).show();
+            }
+
+            if (intent.hasExtra("user")) {
+                User user = (User) intent.getSerializableExtra("user");
+                Log.d("User", user.getUserName());
+                Log.d("User", String.valueOf(user.getAge()));
+                Log.d("User", user.getEmail());
+            }
 
             // 3. print message
-            Toast.makeText(this, name, Toast.LENGTH_SHORT).show();
-            Log.d("User", user.getUserName());
-            Log.d("User", String.valueOf(user.getAge()));
-            Log.d("User", user.getEmail());
+
         }
     }
 

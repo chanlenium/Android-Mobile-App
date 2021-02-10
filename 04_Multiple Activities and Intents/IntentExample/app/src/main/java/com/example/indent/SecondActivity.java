@@ -11,6 +11,10 @@ import android.widget.Toast;
 
 public class SecondActivity extends AppCompatActivity {
 
+    public static final String NAME_KEY = "name_key";
+    public static final String USER_KEY = "user_key";
+    public static final String AGE_KEY = "age_key";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,13 +25,13 @@ public class SecondActivity extends AppCompatActivity {
 
         // 2. get data from the intent using name tag
         if(intent != null){
-            if (intent.hasExtra("name")) {
-                String name = intent.getStringExtra("name");
+            if (intent.hasExtra(NAME_KEY)) {
+                String name = intent.getStringExtra(NAME_KEY);
                 Toast.makeText(this, name, Toast.LENGTH_SHORT).show();
             }
 
-            if (intent.hasExtra("user")) {
-                User user = (User) intent.getSerializableExtra("user");
+            if (intent.hasExtra(USER_KEY)) {
+                User user = (User) intent.getSerializableExtra(USER_KEY);
                 Log.d("User", user.getUserName());
                 Log.d("User", String.valueOf(user.getAge()));
                 Log.d("User", user.getEmail());
@@ -49,7 +53,7 @@ public class SecondActivity extends AppCompatActivity {
         if(age.isEmpty())
             setResult(RESULT_CANCELED);
         else{
-            intent.putExtra("age", age);
+            intent.putExtra(AGE_KEY, age);
             setResult(RESULT_OK, intent);
         }
         finish();

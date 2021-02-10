@@ -8,7 +8,6 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -18,6 +17,9 @@ import android.widget.Toast;
 import java.io.Serializable;
 
 public class MainActivity extends AppCompatActivity {
+
+    public static final String DATA_KEY = "data_key";
+
     private EditText nameEt;
     private TextView ageTv;
     int passedCode = 100;
@@ -35,10 +37,10 @@ public class MainActivity extends AppCompatActivity {
         // Generate Intent object
         Intent intent = new Intent(this, SecondActivity.class);
         // Pass the nameEt value to the secondActivity
-        intent.putExtra("name", nameEt.getText().toString());   // pass key/value pair information
+        intent.putExtra(SecondActivity.NAME_KEY, nameEt.getText().toString());   // pass key/value pair information
 
         User user = new User(nameEt.getText().toString(), 20, "dcoh@myseneca.ca"); // Initialize using constructor
-        intent.putExtra("user", (Serializable)user);
+        intent.putExtra(SecondActivity.USER_KEY, (Serializable)user);
         startActivity(intent);
         // When clicking button current activity is on background
     }
@@ -55,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         // Generate Intent object
         Intent intent = new Intent(this, SecondActivity.class);
         // Pass the nameEt value to the secondActivity
-        intent.putExtra("name", nameEt.getText().toString());
+        intent.putExtra(SecondActivity.NAME_KEY, nameEt.getText().toString());
         startActivityForResult(intent, passedCode);
     }
 
@@ -86,8 +88,8 @@ public class MainActivity extends AppCompatActivity {
         /* check if the Request Code is same as what is passed Code (here, it is 100) */
         if(requestCode == passedCode){
             if(resultCode == RESULT_OK){
-                ageTv.setText(data.getStringExtra("age"));
-                Toast.makeText(this, data.getStringExtra("age"), Toast.LENGTH_LONG).show();
+                ageTv.setText(data.getStringExtra(SecondActivity.AGE_KEY));
+                Toast.makeText(this, data.getStringExtra(SecondActivity.AGE_KEY), Toast.LENGTH_LONG).show();
             }else{
                 Toast.makeText(this, "no Result", Toast.LENGTH_LONG).show();
             }
@@ -96,11 +98,10 @@ public class MainActivity extends AppCompatActivity {
         // get the Bitmap image in the extras, under the key "data"
         // Retrieve image and displays it in an Image view
         if(requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK){
-            Bitmap image = (Bitmap) data.getExtras().get("data");
+            Bitmap image = (Bitmap) data.getExtras().get(DATA_KEY);
             ImageView imageView = findViewById(R.id.imageView);
             imageView.setImageBitmap(image);
         }
     }
-
 
 }

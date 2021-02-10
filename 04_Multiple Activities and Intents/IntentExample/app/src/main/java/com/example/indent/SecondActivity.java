@@ -50,9 +50,9 @@ public class SecondActivity extends AppCompatActivity {
         // Generate intent object to feedback a result
         Intent intent = new Intent();
         // when the age exists, set 'resultCode' as RESULT_OK
-        if(age.isEmpty())
+        if(age.isEmpty()){
             setResult(RESULT_CANCELED);
-        else{
+        }else{
             intent.putExtra(AGE_KEY, age);
             setResult(RESULT_OK, intent);
         }

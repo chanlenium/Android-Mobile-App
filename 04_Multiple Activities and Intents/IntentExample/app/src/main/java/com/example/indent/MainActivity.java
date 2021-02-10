@@ -18,12 +18,11 @@ import java.io.Serializable;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String DATA_KEY = "data_key";
+    public static final int REQUEST_CODE = 100;
+    public static final int REQUEST_IMAGE_CAPTURE = 1;
 
     private EditText nameEt;
     private TextView ageTv;
-    int passedCode = 100;
-    int REQUEST_IMAGE_CAPTURE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SecondActivity.class);
         // Pass the nameEt value to the secondActivity
         intent.putExtra(SecondActivity.NAME_KEY, nameEt.getText().toString());
-        startActivityForResult(intent, passedCode);
+        startActivityForResult(intent, REQUEST_CODE);
     }
 
 
@@ -86,10 +85,13 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         /* check if the Request Code is same as what is passed Code (here, it is 100) */
-        if(requestCode == passedCode){
+        if(requestCode == REQUEST_CODE){
             if(resultCode == RESULT_OK){
-                ageTv.setText(data.getStringExtra(SecondActivity.AGE_KEY));
-                Toast.makeText(this, data.getStringExtra(SecondActivity.AGE_KEY), Toast.LENGTH_LONG).show();
+                if(data.hasExtra(SecondActivity.AGE_KEY)){
+                    String age = data.getStringExtra(SecondActivity.AGE_KEY);
+                    ageTv.setText(age);
+                    Toast.makeText(this, age, Toast.LENGTH_LONG).show();
+                }
             }else{
                 Toast.makeText(this, "no Result", Toast.LENGTH_LONG).show();
             }
@@ -98,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         // get the Bitmap image in the extras, under the key "data"
         // Retrieve image and displays it in an Image view
         if(requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK){
-            Bitmap image = (Bitmap) data.getExtras().get(DATA_KEY);
+            Bitmap image = (Bitmap) data.getExtras().get("data");
             ImageView imageView = findViewById(R.id.imageView);
             imageView.setImageBitmap(image);
         }

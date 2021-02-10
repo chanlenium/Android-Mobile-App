@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.EditText;
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(SecondActivity.NAME_KEY, nameEt.getText().toString());   // pass key/value pair information
 
         User user = new User(nameEt.getText().toString(), 20, "dcoh@myseneca.ca"); // Initialize using constructor
-        intent.putExtra(SecondActivity.USER_KEY, (Serializable)user);
+        intent.putExtra(SecondActivity.USER_KEY, (Parcelable)user);
         startActivity(intent);
         // When clicking button current activity is on background
     }

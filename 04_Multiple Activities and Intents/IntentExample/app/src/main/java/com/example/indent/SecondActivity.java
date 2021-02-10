@@ -31,7 +31,7 @@ public class SecondActivity extends AppCompatActivity {
             }
 
             if (intent.hasExtra(USER_KEY)) {
-                User user = (User) intent.getSerializableExtra(USER_KEY);
+                User user = (User) intent.getParcelableExtra(USER_KEY);
                 Log.d("User", user.getUserName());
                 Log.d("User", String.valueOf(user.getAge()));
                 Log.d("User", user.getEmail());

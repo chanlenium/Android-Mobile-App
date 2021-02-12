@@ -1,5 +1,5 @@
 ## My Favorite Dishes
-* Demo link : https://appetize.io/app/1acrdz9d0a383k934x0q140h5w?device=pixel4&scale=75&orientation=portrait&osVersion=10.0
+* Demo link : https://appetize.io/app/dbkrgkny2d6tx90aetvhjwf8bg?device=pixel4&scale=75&orientation=portrait&osVersion=10.0
 
 ## Objectives
 * Familiar with using `RecyclerView`.

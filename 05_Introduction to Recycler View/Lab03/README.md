@@ -83,4 +83,4 @@ recyclerView.setAdapter(dishAdapter);
 ```
 
 ## Screenshot
-<img src="https://github.com/chanlenium/Android-Mobile-App/blob/main/04_Multiple%20Activities%20and%20Intents/Assignment01/Screenshots.png" width="900" height="350" />
+<img src="https://github.com/chanlenium/Android-Mobile-App/blob/main/05_Introduction%20to%20Recycler%20View/Lab03/Lab3Screenshot.png" width="900" height="350" />

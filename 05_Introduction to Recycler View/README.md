@@ -13,3 +13,5 @@
     * After making *ViewHolder* obejct in *onCreateViewHolder* method, 
     * *Adapter* binds data with that ViewHolder object using *onBindViewHolder* method 
 * Model(data) : actual data
+
+<img src="https://github.com/chanlenium/Android-Mobile-App/blob/main/05_Introduction%20to%20Recycler%20View/recyclerView.JPG" width="900" height="350" />

@@ -23,7 +23,7 @@ public class selectFoodActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_food);
-        init(); // function to initialize variables
+        initData(); // function to initialize variables
 
         // When clicking the checkout button..
         Button checkoutBtn = findViewById(R.id.checkoutBtn);
@@ -49,7 +49,7 @@ public class selectFoodActivity extends AppCompatActivity {
             openSummaryActivity();  // call to open summaryActivity
     }
 
-    private void init() {   // Initialize ArrayLists
+    private void initData() {   // Initialize ArrayLists
         foodList = new ArrayList<>();
         foodList.add(new Menu("Fish", 12.0));
         foodList.add(new Menu("Chicken", 11.0));
@@ -69,7 +69,7 @@ public class selectFoodActivity extends AppCompatActivity {
         ArrayList<Menu> selectedMenu = new ArrayList<>(selectedFoods);
         selectedMenu.add(selectedDrink);
 
-        intent.putParcelableArrayListExtra("foodList", selectedMenu);
+        intent.putParcelableArrayListExtra(summaryActivity.FOODLIST_KEY, selectedMenu);
         startActivityForResult(intent, SUMMARY_CODE_REQUEST);
     }
 

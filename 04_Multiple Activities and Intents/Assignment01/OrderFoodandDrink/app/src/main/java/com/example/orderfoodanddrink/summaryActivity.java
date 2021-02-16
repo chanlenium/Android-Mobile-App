@@ -16,6 +16,8 @@ import java.util.Currency;
 
 public class summaryActivity extends AppCompatActivity {
 
+    public static final String FOODLIST_KEY = "foodList";
+
     private ArrayList<Menu> foodList;
     private ListView listView;
     private ArrayList<String> selectedMenu;
@@ -63,7 +65,9 @@ public class summaryActivity extends AppCompatActivity {
 
     private void init() {
         // get reference to the intent and get data from intent
-        foodList = getIntent().getParcelableArrayListExtra("foodList");
+        if (getIntent().hasExtra(FOODLIST_KEY)) {
+            foodList = getIntent().getParcelableArrayListExtra(FOODLIST_KEY);
+        }
         listView = findViewById(R.id.listView);
         selectedMenu = new ArrayList<String>();
         total = 0;
@@ -87,7 +91,6 @@ public class summaryActivity extends AppCompatActivity {
     private void requestEditOrder() { // Open selectedFoodActivity for editing order
         Intent intent = new Intent();
         intent.putParcelableArrayListExtra("foodList", foodList);
-        //intent.putParcelableArrayListExtra("drinkList", drinkList);
         setResult(RESULT_OK, intent); // Here, 100 is same as the REQUEST_CODE from selectFoodActivity
         finish();
     }

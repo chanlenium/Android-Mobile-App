@@ -90,7 +90,7 @@ public class summaryActivity extends AppCompatActivity {
 
     private void requestEditOrder() { // Open selectedFoodActivity for editing order
         Intent intent = new Intent();
-        intent.putParcelableArrayListExtra("foodList", foodList);
+        intent.putParcelableArrayListExtra(FOODLIST_KEY, foodList);
         setResult(RESULT_OK, intent); // Here, 100 is same as the REQUEST_CODE from selectFoodActivity
         finish();
     }

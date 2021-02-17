@@ -5,24 +5,24 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.RadioButton;
 import android.widget.Toast;
 import java.util.ArrayList;
 
 public class selectFoodActivity extends AppCompatActivity {
-    private ArrayList<Menu> foodList;   // variable for food list
-    private ArrayList<Menu> drinkList;  // variable for drink list
     static final int SUMMARY_CODE_REQUEST = 100;  // parameter identifying the call
+    private ArrayList<Menu> foodList;   // variable for all food list
+    private ArrayList<Menu> drinkList;  // variable for all drink list
+    private ArrayList<Menu> selectedFoods; // variable for storing selected foods
+    private Menu selectedDrink;  // variable for storing selected drink
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_food);
-        init(); // function to initialize variables
+        initData(); // function to initialize variables
 
         // When clicking the checkout button..
         Button checkoutBtn = findViewById(R.id.checkoutBtn);
@@ -34,15 +34,26 @@ public class selectFoodActivity extends AppCompatActivity {
         });
     }
 
+    private void initData() {   // Initialize ArrayLists
+        foodList = new ArrayList<>();
+        foodList.add(new Menu("Fish", 12.0));
+        foodList.add(new Menu("Chicken", 11.0));
+        foodList.add(new Menu("Roasted Veggies", 10.0));
+        foodList.add(new Menu("Grilled Steak", 15.0));
+
+        drinkList = new ArrayList<>();
+        drinkList.add(new Menu("Tea", 1.7));
+        drinkList.add(new Menu("Coffee", 1.8));
+        drinkList.add(new Menu("Orange Juice", 2.0));
+        drinkList.add(new Menu("Apple Juice", 3.0));
+
+        selectedFoods = new ArrayList<>();
+        selectedDrink = null;
+    }
+
     private void inputValidate() {  // Check at least one of food items is selected
-        boolean foodChecked = false, drinkChecked = false;
-        for(int i = 0; i < foodList.size() && !foodChecked; i++)
-            foodChecked = foodList.get(i).isChecked();
-
-        // Check at least one of drink items is selected
-        for(int i = 0; i < drinkList.size() && !drinkChecked; i++)
-            drinkChecked = drinkList.get(i).isChecked();
-
+        boolean foodChecked = selectedFoods.size() > 0;
+        boolean drinkChecked = selectedDrink != null;
         if(!foodChecked && !drinkChecked){
             Toast.makeText(this, "Select Food and Drink", Toast.LENGTH_LONG).show();
         }else if(foodChecked && !drinkChecked){
@@ -53,24 +64,10 @@ public class selectFoodActivity extends AppCompatActivity {
             openSummaryActivity();  // call to open summaryActivity
     }
 
-    private void init() {   // Initialize ArrayLists
-        foodList = new ArrayList<>();
-        foodList.add(new Menu("Fish", 12.0, false));
-        foodList.add(new Menu("Chicken", 11.0, false));
-        foodList.add(new Menu("Roasted Veggies", 10.0, false));
-        foodList.add(new Menu("Grilled Steak", 15.0, false));
-
-        drinkList = new ArrayList<>();
-        drinkList.add(new Menu("Tea", 1.7, false));
-        drinkList.add(new Menu("Coffee", 1.8, false));
-        drinkList.add(new Menu("Orange Juice", 2.0, false));
-        drinkList.add(new Menu("Apple Juice", 3.0, false));
-    }
-
     private void openSummaryActivity() {    // Open summaryActivity by passing arrayList
         Intent intent = new Intent(this, summaryActivity.class);
-        intent.putParcelableArrayListExtra("foodList", foodList);
-        intent.putParcelableArrayListExtra("drinkList", drinkList);
+        intent.putParcelableArrayListExtra("selectedFoods", selectedFoods);
+        intent.putExtra("selectedDrink", selectedDrink);
         startActivityForResult(intent, SUMMARY_CODE_REQUEST);
     }
 
@@ -89,16 +86,32 @@ public class selectFoodActivity extends AppCompatActivity {
         // Check which checkbox was clicked
         switch(view.getId()) {
             case R.id.foodFishCb:
-                foodList.get(0).setChecked(checked);
+                if (checked) {  // checked
+                    selectedFoods.add(foodList.get(0));
+                } else {    // unchecked
+                    selectedFoods.remove(foodList.get(0));
+                }
                 break;
             case R.id.foodChickenCb:
-                foodList.get(1).setChecked(checked);
+                if (checked) {
+                    selectedFoods.add(foodList.get(1));
+                } else {
+                    selectedFoods.remove(foodList.get(1));
+                }
                 break;
             case R.id.foodRoastedVeggiesCb:
-                foodList.get(2).setChecked(checked);
+                if (checked) {
+                    selectedFoods.add(foodList.get(2));
+                } else {
+                    selectedFoods.remove(foodList.get(2));
+                }
                 break;
             case R.id.foodGrilledSteakCb:
-                foodList.get(3).setChecked(checked);
+                if (checked) {
+                    selectedFoods.add(foodList.get(3));
+                } else {
+                    selectedFoods.remove(foodList.get(3));
+                }
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + view.getId());
@@ -106,42 +119,19 @@ public class selectFoodActivity extends AppCompatActivity {
     }
 
     public void onRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
-
         // Check which radio button was clicked
         switch(view.getId()) {
             case R.id.teaRbtn:
-                for(int i = 0; i < drinkList.size(); i++){
-                    if(i == 0)
-                        drinkList.get(i).setChecked(checked);
-                    else
-                        drinkList.get(i).setChecked(!checked);
-                }
+                selectedDrink = drinkList.get(0);
                 break;
             case R.id.coffeeRbtn:
-                for(int i = 0; i < drinkList.size(); i++){
-                    if(i == 1)
-                        drinkList.get(i).setChecked(checked);
-                    else
-                        drinkList.get(i).setChecked(!checked);
-                }
+                selectedDrink = drinkList.get(1);
                 break;
             case R.id.orangeJuiceRbtn:
-                for(int i = 0; i < drinkList.size(); i++){
-                    if(i == 2)
-                        drinkList.get(i).setChecked(checked);
-                    else
-                        drinkList.get(i).setChecked(!checked);
-                }
+                selectedDrink = drinkList.get(2);
                 break;
             case R.id.appleJuiceRbtn:
-                for(int i = 0; i < drinkList.size(); i++){
-                    if(i == 3)
-                        drinkList.get(i).setChecked(checked);
-                    else
-                        drinkList.get(i).setChecked(!checked);
-                }
+                selectedDrink = drinkList.get(3);
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + view.getId());

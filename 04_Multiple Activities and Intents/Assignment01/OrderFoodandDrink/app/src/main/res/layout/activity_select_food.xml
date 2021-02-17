@@ -23,17 +23,17 @@
     <CheckBox
         android:id="@+id/foodFishCb"
         android:layout_width="wrap_content"
-        android:layout_height="46dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:onClick="onCheckboxClicked"
         android:text="@string/foodMenu1"
         android:textSize="14sp"
+        android:theme="@style/colored_CheckBox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        android:theme="@style/colored_CheckBox"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <CheckBox
         android:id="@+id/foodChickenCb"
@@ -78,11 +78,11 @@
 
     <RadioGroup
         android:id="@+id/radioGroup2"
-        android:layout_width="288dp"
-        android:layout_height="191dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.308"
+        app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4">
 
@@ -90,33 +90,33 @@
             android:id="@+id/teaRbtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/drinkMenu1"
             android:onClick="onRadioButtonClicked"
-            android:theme="@style/RadioButtonStyle"/>
+            android:text="@string/drinkMenu1"
+            android:theme="@style/RadioButtonStyle" />
 
         <RadioButton
             android:id="@+id/coffeeRbtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/drinkMenu2"
             android:onClick="onRadioButtonClicked"
-            android:theme="@style/RadioButtonStyle"/>
+            android:text="@string/drinkMenu2"
+            android:theme="@style/RadioButtonStyle" />
 
         <RadioButton
             android:id="@+id/orangeJuiceRbtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/drinkMenu3"
             android:onClick="onRadioButtonClicked"
-            android:theme="@style/RadioButtonStyle"/>
+            android:text="@string/drinkMenu3"
+            android:theme="@style/RadioButtonStyle" />
 
         <RadioButton
             android:id="@+id/appleJuiceRbtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/drinkMenu4"
             android:onClick="onRadioButtonClicked"
-            android:theme="@style/RadioButtonStyle"/>
+            android:text="@string/drinkMenu4"
+            android:theme="@style/RadioButtonStyle" />
     </RadioGroup>
 
     <Button

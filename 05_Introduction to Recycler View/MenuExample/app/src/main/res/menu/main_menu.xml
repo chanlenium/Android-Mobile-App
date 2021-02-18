@@ -5,14 +5,15 @@
     <item
         android:id="@+id/item1"
         android:icon="@drawable/ic_launcher_foreground"
-        android:title="item1"
+        android:title="@string/item1"
         app:showAsAction="always" />
     <item
         android:id="@+id/item2"
-        android:title="settings"
+        android:title="@string/item2"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/item3"
-        android:title="Item3" />
+        android:title="@string/item3"
+        app:showAsAction="ifRoom"/>
 </menu>

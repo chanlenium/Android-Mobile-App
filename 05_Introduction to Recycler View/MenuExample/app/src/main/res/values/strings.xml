@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MenuExample</string>
+    <string name="item1">item1</string>
+    <string name="item2">item2</string>
+    <string name="item3">Item3</string>
+    <string name="toastMsg">You clicked</string>
 </resources>

@@ -31,13 +31,9 @@ public class SelectedDishActivity extends AppCompatActivity {
         // Activity can get reference to fragment using FragmentManager
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.add(R.id.selectedDishFrag, new SelectedDishFragment()).commit();
 
-        Fragment myFrag = fragmentManager.findFragmentById(R.id.selectedDishFrag);
-        /** 에러나는 부분 */
-        ((SelectedDishFragment)myFrag).selectedDishNameTv.setText("abc");
-        ((SelectedDishFragment)myFrag).setSelectedDishNameTv("adb");
 
+        transaction.add(R.id.selectedDishFrag, SelectedDishFragment.newInstance("abc","abc")).commit();
 
         //if you added fragment via layout xml
         //SelectedDishFragment fragment =  (SelectedDishFragment)fm.findFragmentById(R.id.selectedDishFrag);

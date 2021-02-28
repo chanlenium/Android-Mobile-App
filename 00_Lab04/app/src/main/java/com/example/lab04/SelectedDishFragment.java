@@ -4,7 +4,6 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,16 +11,24 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class SelectedDishFragment extends Fragment {
-    public TextView selectedDishNameTv;
-    public ImageView selectedDishImage;
-    public TextView selectedDishRatingTv;
 
-    public SelectedDishFragment() {
-    }
+    private static final String ARG_NAME_PARAM = "ARG_NAME_PARAM";
+    private static final String ARG_RATE_PARAM = "ARG_RATE_PARAM";
+
+    private String name;
+    private String rate;
+
+    private TextView selectedDishNameTv;
+    private ImageView selectedDishImage;
+    private TextView selectedDishRatingTv;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            name = getArguments().getString(ARG_NAME_PARAM);
+            rate = getArguments().getString(ARG_RATE_PARAM);
+        }
     }
 
     @Override
@@ -34,8 +41,8 @@ public class SelectedDishFragment extends Fragment {
         selectedDishRatingTv = view.findViewById(R.id.selectedDishRatingTv);
 
         //Log.d("tagraw", String.valueOf(selectedDishNameTv.getText()));
-        selectedDishNameTv.setText("aaa");
-        selectedDishRatingTv.setText("5.5");
+        selectedDishNameTv.setText(name);
+        selectedDishRatingTv.setText(rate);
 
         return view;
     }
@@ -43,4 +50,14 @@ public class SelectedDishFragment extends Fragment {
     public void setSelectedDishNameTv(String str) {
         this.selectedDishNameTv.setText(str);
     }
+
+    public static SelectedDishFragment newInstance(String param1, String param2) {
+        SelectedDishFragment fragment = new SelectedDishFragment();
+        Bundle args = new Bundle();
+        args.putString(ARG_NAME_PARAM, param1);
+        args.putString(ARG_RATE_PARAM, param2);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
 }

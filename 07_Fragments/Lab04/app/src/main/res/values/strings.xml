@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Lab04</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="my_favorite_dishes">My Favorite Dishes</string>
+    <string name="selected_item">Selected Item</string>
+    <string name="selected_dish_image">selected dish image</string>
+    <string name="dish_name">dish name</string>
+    <string name="dish_image">dish image</string>
+</resources>

@@ -4,7 +4,7 @@
  *  (3) Associate current view model value with recyclerView using adapter (DishRecyclerViewAdapter)
  */
 
-package com.example.lab04.screens;
+package com.example.lab04.screens.dishlist;
 
 import android.os.Bundle;
 

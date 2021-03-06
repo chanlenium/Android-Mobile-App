@@ -1,4 +1,4 @@
-package com.example.lab04;
+package com.example.lab04.screens.selecteddish;
 
 import android.os.Bundle;
 
@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.lab04.R;
 
 public class SelectedDishFragment extends Fragment {
     private static final String ARG_NAME_PARAM = "ARG_NAME_PARAM";

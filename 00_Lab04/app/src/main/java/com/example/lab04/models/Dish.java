@@ -3,7 +3,7 @@
  *  To make object data to IO stream, this class implements Parcelable interface
  */
 
-package com.example.lab04;
+package com.example.lab04.models;
 
 import android.os.Parcel;
 import android.os.Parcelable;

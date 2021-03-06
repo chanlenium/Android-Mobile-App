@@ -4,7 +4,7 @@
  *  (3) Associate current view model value with recyclerView using adapter (DishRecyclerViewAdapter)
  */
 
-package com.example.lab04;
+package com.example.lab04.screens;
 
 import android.os.Bundle;
 
@@ -16,6 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.lab04.R;
 
 public class DishListFragment extends Fragment {
     RecyclerView recyclerView;  // reference variable for RecyclerView

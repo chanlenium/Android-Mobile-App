@@ -3,11 +3,14 @@
  * ViewModel can take care of holding and processing all the data needed for the UI.
  */
 
-package com.example.lab04;
+package com.example.lab04.screens;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
+
+import com.example.lab04.Dish;
+import com.example.lab04.R;
 
 import java.util.ArrayList;
 

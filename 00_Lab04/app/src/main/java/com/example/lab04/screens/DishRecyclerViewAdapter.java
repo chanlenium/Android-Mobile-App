@@ -3,7 +3,7 @@
  * (2) Implement click listener
  * (3) Open another activity using intent with passed data
  */
-package com.example.lab04;
+package com.example.lab04.screens;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -19,6 +19,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.lab04.Dish;
+import com.example.lab04.R;
+import com.example.lab04.SelectedDishActivity;
 
 import java.util.ArrayList;
 

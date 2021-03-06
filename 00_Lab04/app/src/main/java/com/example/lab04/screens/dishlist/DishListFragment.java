@@ -20,8 +20,8 @@ import android.view.ViewGroup;
 import com.example.lab04.R;
 
 public class DishListFragment extends Fragment {
-    RecyclerView recyclerView;  // reference variable for RecyclerView
-    DishListViewModel viewModel;    // reference variable for ViewModel
+    private RecyclerView recyclerView;  // reference variable for RecyclerView
+    private DishListViewModel viewModel;    // reference variable for ViewModel
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

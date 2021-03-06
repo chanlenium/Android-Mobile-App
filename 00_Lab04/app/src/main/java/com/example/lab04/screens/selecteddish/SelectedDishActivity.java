@@ -33,6 +33,6 @@ public class SelectedDishActivity extends AppCompatActivity {
         // Activity can get reference to fragment using FragmentManager
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.selectedDishFrag, SelectedDishFragment.newInstance(selectedDish.getDishName(), "Rating: " + String.valueOf(selectedDish.getDishRating()), selectedDish.getDishImage())).commit();
+        fragmentTransaction.add(R.id.selectedDishFrag, SelectedDishFragment.newInstance(selectedDish)).commit();
     }
 }

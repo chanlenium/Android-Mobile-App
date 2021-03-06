@@ -14,7 +14,7 @@ import com.example.lab04.R;
 
 import java.util.ArrayList;
 
-public class MainViewModel extends ViewModel {
+public class DishListViewModel extends ViewModel {
     // 'LiveData' is a lifecycle-aware observable data holder class.
     // (only updates app component observers that are in an active(STARTED or RESUMED) lifecycle state)
     // To update data stored within LiveData, must use 'MutableLiveData' using setValue(T) or postValue(T)

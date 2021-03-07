@@ -4,7 +4,7 @@
  *  (3) Associate current view model value with recyclerView using adapter (DishRecyclerViewAdapter)
  */
 
-package com.example.lab04;
+package com.example.lab04.screens.dishlist;
 
 import android.os.Bundle;
 
@@ -17,9 +17,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.lab04.R;
+
 public class DishListFragment extends Fragment {
-    RecyclerView recyclerView;  // reference variable for RecyclerView
-    MainViewModel viewModel;    // reference variable for ViewModel
+    private RecyclerView recyclerView;  // reference variable for RecyclerView
+    private DishListViewModel viewModel;    // reference variable for ViewModel
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -43,7 +45,7 @@ public class DishListFragment extends Fragment {
         // When the Activity first starts, the ViewModelProvider will create the ViewModel.
         // When the activity is destroyed, the ViewModel persists.
         // When the activity is re-created, the ViewModelProviders return the existing ViewModel
-        viewModel = new ViewModelProvider(this).get(MainViewModel.class);
+        viewModel = new ViewModelProvider(this).get(DishListViewModel.class);
         viewModel.getLiveArrayDish().observe(getViewLifecycleOwner(), currentValue -> {
             // associate current view model value with recyclerView using adapter
             recyclerView.setAdapter(new DishRecyclerViewAdapter(currentValue, getActivity()));

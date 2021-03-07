@@ -1,4 +1,4 @@
-package com.example.lab04;
+package com.example.lab04.screens.selecteddish;
 
 import android.os.Bundle;
 
@@ -10,14 +10,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class SelectedDishFragment extends Fragment {
-    private static final String ARG_NAME_PARAM = "ARG_NAME_PARAM";
-    private static final String ARG_RATE_PARAM = "ARG_RATE_PARAM";
-    private static final String ARG_IMAG_PARAM = "ARG_IMAG_PARAM";
+import com.example.lab04.R;
+import com.example.lab04.models.Dish;
 
-    private String dishName;
-    private String dishRate;
-    private int dishImageId;
+public class SelectedDishFragment extends Fragment {
+    private static final String ARG_DISH_PARAM = "ARG_DISH_PARAM";
+
+    private Dish dish;
 
     private TextView selectedDishNameTv;
     private TextView selectedDishRatingTv;
@@ -27,9 +26,7 @@ public class SelectedDishFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            dishName = getArguments().getString(ARG_NAME_PARAM);
-            dishImageId = getArguments().getInt(ARG_IMAG_PARAM);
-            dishRate = getArguments().getString(ARG_RATE_PARAM);
+            dish = getArguments().getParcelable(ARG_DISH_PARAM);
         }
     }
 
@@ -44,19 +41,17 @@ public class SelectedDishFragment extends Fragment {
         selectedDishRatingTv = view.findViewById(R.id.selectedDishRatingTv);
 
         // set values
-        selectedDishNameTv.setText(dishName);
-        selectedDishRatingTv.setText(dishRate);
-        selectedDishImage.setImageResource(dishImageId);
+        selectedDishNameTv.setText(dish.getDishName());
+        selectedDishRatingTv.setText("Rating: " + dish.getDishRating());
+        selectedDishImage.setImageResource(dish.getDishImage());
 
         return view;
     }
 
-    public static SelectedDishFragment newInstance(String param1, String param2, int param3) {
+    public static SelectedDishFragment newInstance(Dish dish) {
         SelectedDishFragment fragment = new SelectedDishFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_NAME_PARAM, param1);
-        args.putString(ARG_RATE_PARAM, param2);
-        args.putInt(ARG_IMAG_PARAM, param3);
+        args.putParcelable(ARG_DISH_PARAM, dish);
         fragment.setArguments(args);
         return fragment;
     }

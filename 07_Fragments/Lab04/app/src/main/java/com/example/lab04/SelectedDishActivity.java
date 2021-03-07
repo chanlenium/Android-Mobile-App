@@ -6,12 +6,17 @@
 
 package com.example.lab04;
 
+import android.content.Intent;
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
-import android.os.Bundle;
+import com.example.lab04.models.Dish;
+
+import static com.example.lab04.R.id;
+import static com.example.lab04.R.layout;
 
 public class SelectedDishActivity extends AppCompatActivity {
     private Dish selectedDish;
@@ -19,7 +24,7 @@ public class SelectedDishActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_selected_dish);
+        setContentView(layout.activity_selected_dish);
 
         // get the reference to the intent declared in MainActivity
         Intent intent = getIntent();
@@ -30,6 +35,7 @@ public class SelectedDishActivity extends AppCompatActivity {
         // Activity can get reference to fragment using FragmentManager
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.selectedDishFrag, SelectedDishFragment.newInstance(selectedDish.getDishName(), "Rating: " + String.valueOf(selectedDish.getDishRating()), selectedDish.getDishImage())).commit();
+        fragmentTransaction.add(id.selectedDishFrag,
+                SelectedDishFragment.newInstance(selectedDish, selectedDish.getDishName(), "Rating: " + String.valueOf(selectedDish.getDishRating()), selectedDish.getDishImage())).commit();
     }
 }

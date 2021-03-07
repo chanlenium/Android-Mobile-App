@@ -3,18 +3,15 @@
  * ViewModel can take care of holding and processing all the data needed for the UI.
  */
 
-package com.example.lab04.screens.dishlist;
+package com.example.lab04;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.example.lab04.models.Dish;
-import com.example.lab04.R;
-
 import java.util.ArrayList;
 
-public class DishListViewModel extends ViewModel {
+public class MainViewModel extends ViewModel {
     // 'LiveData' is a lifecycle-aware observable data holder class.
     // (only updates app component observers that are in an active(STARTED or RESUMED) lifecycle state)
     // To update data stored within LiveData, must use 'MutableLiveData' using setValue(T) or postValue(T)

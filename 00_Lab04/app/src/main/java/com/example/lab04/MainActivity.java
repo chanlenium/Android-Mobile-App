@@ -1,13 +1,10 @@
-package com.example.lab04.screens.main;
+package com.example.lab04;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
-
-import com.example.lab04.R;
-import com.example.lab04.screens.dishlist.DishListFragment;
 
 public class MainActivity extends AppCompatActivity {
     @Override

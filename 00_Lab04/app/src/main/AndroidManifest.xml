@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Lab04">
-        <activity android:name=".screens.selecteddish.SelectedDishActivity"></activity>
-        <activity android:name=".screens.main.MainActivity">
+        <activity android:name=".SelectedDishActivity"></activity>
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

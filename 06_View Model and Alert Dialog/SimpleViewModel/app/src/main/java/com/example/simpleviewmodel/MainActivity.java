@@ -24,13 +24,17 @@ public class MainActivity extends AppCompatActivity {
         tv = findViewById(R.id.textView);
         editText = findViewById(R.id.nameId);
         myViewModel = new ViewModelProvider(this).get(MyViewModel.class);   // create once only
-        tv.setText(myViewModel.getData());
+        //tv.setText(myViewModel.getData());
+        myViewModel.getData().observe(this, newValue ->{
+            tv.setText(newValue);
+        });
     }
 
     public void greet(View view) {
         String name = editText.getText().toString();
         myViewModel.setData("Hi " + name);
-        tv.setText(myViewModel.getData());  // data will persist
+        tv.setText(String.valueOf(myViewModel.getData().getValue()));
+        //tv.setText(myViewModel.getData());  // data will persist
         //tv.setText("Hi " + name);
     }
 }

@@ -3,7 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< Updated upstream
     tools:context=".DishListFragment">
+=======
+<<<<<<< HEAD
+    tools:context=".screens.dishlist.DishListFragment">
+=======
+    tools:context=".DishListFragment">
+>>>>>>> parent of 910514f... code cleanup
+>>>>>>> Stashed changes
 
     <!-- TODO: Update blank fragment layout -->
 

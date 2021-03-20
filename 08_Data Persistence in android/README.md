@@ -1,25 +1,24 @@
-# Fragments
+# Data Persistence
 
 ## Topics
->* Fragment Life Cycle
->* Adding Fragment
->* Communication between `Activity` and `Fragment`
->* ViewPager2 to display in a swipeable format
+>* Reading and writing to files on the device
+>* Different storage options (Internal storage, External storage, Shared preferences)
 
 ## Contents
-* Activity contains `View` (e.g., TextView, ImageView) and `View Group` (e.g., Linear Layout, Relative Layout)
-    * Activity may contain more than one fragment
-* Fragment is a *modular* section of an activity (or activity's sub view)
-    * flexible UI designs
-    * has its own lifecycle
-    * diectly affected by host activity's lifecycle
-    * can be added or removed while the activity is running
-    * can be declared in layout XML using `<fragment>` element
-<img src="https://github.com/chanlenium/Android-Mobile-App/blob/main/07_Fragments/fragmentLifeCycle.jpg" />
-
-* It is recommended that 3 callback function should be implemented
-    * `onCreate()`, `onCreateView()`, `onPause()`
-<img src="https://github.com/chanlenium/Android-Mobile-App/blob/main/07_Fragments/callback.JPG" width="500" height="300" />
-
-* ViewPager2 displays Views or Fragments in a swipeable format
-    * Add `ViewPagerAdapter` which extends `FragmentStateAdapter`
+* Storing data *permanently* so that it can be retained if the device is shutdown
+    * Files on the device, key-value pairs(Shared preferences), Database, and Networking(remote server)
+* Android provides two types of physical storage locations: 
+    * internal storage (smaller in size, more reliable place)
+    * external storage (Removable volumes such as an SD card) 
+* Internal Storage
+    * to store sensitive information that other apps shouldn't access
+    * Stored in the application’s sandbox
+    * Files are deleted along with your app when it is uninstalled
+    * No permissions required for reading/writing files her
+* External Storage
+    * External to your application’s sandbox
+    * Android defines the storage-related permissions to access any file outside the app-specific directories on external storage
+    * `READ_EXTERNAL_STORAGE`, `WRITE_EXTERNAL_STORAGE`, `MANAGE_EXTERNAL_STORAGE`
+* Shared Preferences
+    * Allow us to store and retrieve data in key/value pair
+    * Each value has its own key for storage and retrieval of that data

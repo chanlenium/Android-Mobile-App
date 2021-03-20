@@ -1,86 +1,103 @@
-## My Favorite Dishes
-* Demo link : https://appetize.io/app/dbkrgkny2d6tx90aetvhjwf8bg?device=pixel4&scale=75&orientation=portrait&osVersion=10.0
+## Save users names to file
+* Demo link : https://appetize.io/app/x22zbcg2fb449kmqnnymwtyrem?device=nexus5&scale=75&orientation=portrait&osVersion=8.1
 
 ## Objectives
-* Familiar with using `RecyclerView`.
-    * RecyclerView is the *ViewGroup* that contains the views corresponding to data.
-* Design simple *RecyclerView*.
-* Implement custom Adapter, ViewHolder, and OnClickListener.
-* Display items in List array.
+* Save users names to file ( Shared Preference )
+* Read the list of users name and display it in RecyclerView
+* Implement option menu
 
 ## Outline
-* Design
-    * Add *RecyclerView* component to activity_main.xml with customID (e.g., `recyclerView`)
-    * Create another custom layout for each row (i.e., for each view) (e.g., `row_view.xml`)
-
-* Create Dish class
-    * `String dishName`, `int dishImage`, `float dishRating`;
-    * Make *constructor* and *getter/setter*
-    * Override `toString()`
-
-* Create a custom adapter class (e.g., DishAdapter) which inherit from `RecyclerView.Adapter` 
-    * Adapter is composed of (1)*onCreateViewHolder*, (2)*onBindViewHolder*, (3)*getItemCount*, and (4)*ViewHolder subclass*
-* Create *ViewHolder* subclass which inherit from `RecyclerView.ViewHolder`
-    * Role : Manage each row related to components in row (`row_view.xml`)
-    * Mapping components in the itemView to fields
+* Design option menu to open second activity
+* Override onCreateOptionsMenu() to inflate a menu resource(defined in XML)
 ```
-class DishViewHolder extends RecyclerView.ViewHolder{
-    ImageView dishImage;
-    TextView dishName;
-    RatingBar dishRating;
+public boolean onCreateOptionsMenu(Menu menu) {
+    MenuInflater inflater = getMenuInflater();
+    inflater.inflate(R.menu.main_menu, menu);
+    return true;
+}
+```
+* When the user selects an item from the options menu, the system calls your activity's onOptionsItemSelected() method
+```
+public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+    int id = item.getItemId();
+    if(id == R.id.pageMenuOption){
+        Intent intent = new Intent(this, SecondActivity.class);
+        intent.putExtra("filename", FILE_NAME);
+        startActivity(intent);
+        Toast.makeText(this, "page2", Toast.LENGTH_SHORT).show();
+        return true;
+    }
+    return super.onOptionsItemSelected(item);
+}
+```
 
-    public DishViewHolder(@NonNull View itemView) {
-        super(itemView);    // itemView is actual view that we have just create
-        // Mapping components in the itemView to fields
-        dishImage = itemView.findViewById(R.id.dishImage);
-        dishName = itemView.findViewById(R.id.dishName);
-        dishRating = itemView.findViewById(R.id.ratingBar);
-        dishRating.setIsIndicator(true);    // read only number of stars
+* Implementing event listner (button clicking) in MainActivity
+   * When clicking `ADD USER TO FILE` button, the app uses the `Editor` to write values to the SharedPreferences
+   * Store user input by coverting `Java String object` to `JSON string` 
+```
+// GSON : library to change java object to JSON(key, value)
+Gson gson = new Gson();
+String jsonString = gson.toJson(userList);  // change userList to JSON string
+
+// get Shared Preference instance
+// object points to a file containing key-value pairs
+SharedPreferences sharedPreferences = getSharedPreferences(FILE_NAME, MODE_PRIVATE);
+SharedPreferences.Editor editor = sharedPreferences.edit(); // using the Editor to write values to the SharedPreferences
+editor.putString("username", jsonString);
+editor.commit();
+```
+   * When clicking `DELETE FILE` button, the app delete all contents in file using alert dialog
+```
+AlertDialog.Builder builder = new AlertDialog.Builder(this);
+builder.setIcon(ContextCompat.getDrawable(MainActivity.this,R.drawable.ic_baseline_warning_24));
+builder.setTitle("Deleting USERS_LIST_FILE")
+        .setMessage("Are you sure you want to delete the file?")
+        .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                SharedPreferences preferences = getSharedPreferences(FILE_NAME, MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.clear(); // clear all contents in file
+                editor.commit();
+                Toast.makeText(MainActivity.this, "Delete done", Toast.LENGTH_LONG).show();
+            }
+        })
+        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(MainActivity.this, "Cancel", Toast.LENGTH_LONG).show();
+            }
+        });
+AlertDialog dialog = builder.create();
+dialog.show();
+```
+
+* Implementing event listner (button clicking) in SecondActivity
+   * When clicking `DISPLAY USER` button, the app display all stored user data in RecyclerView
+   * Display user name data by coverting `JSON string` to `Java String` object 
+
+```
+public void displayUsers(View view) {
+    if(intent != null){
+        String fileName = intent.getStringExtra("filename");    // get String passed from MainActivity
+        SharedPreferences sharedPreferences = getSharedPreferences(fileName, MODE_PRIVATE);
+        // Get string which key is "username". If the searched key(i.e., "username" does not exist, it returns "no_name")
+        String jsonString = sharedPreferences.getString("username", "no_name");
+
+        if(jsonString.equals("no_name")){
+            Toast.makeText(this, "File not found", Toast.LENGTH_SHORT).show();
+        }else{
+            Gson gson = new Gson();
+            Type type = new TypeToken<ArrayList<UserModel>>(){}.getType();
+            ArrayList<UserModel> userList = gson.fromJson(jsonString, type);    // change JSON data to type data
+            Log.d("TAG", String.valueOf(userList.get(0).getName()));
+
+            // add(associate) "R.id.userListViewFragment" with Fragment 'UserListViewFragment'
+            fragmentTransaction.add(R.id.userListViewFragment, new UserListViewFragment(userList)).commit();
+        }
     }
 }
 ```
-* Add `extends RecyclerView.Adapter<RecyclerAdapter.ViewHoldersubclassName>`
-* create constructor to receive data
-* Implement default `onCreateViewHolder`, `onBindViewHolder`, `getItemCount`
-* Modify `onCreateViewHolder` to create new views (invoked by the layout manager)
-    * Transfer xml(`row_view.xml`) to an object and create each row(View object) using `LayoutInflater`
-    * Create instance of `MyViewHolder` class with argument `View object` and return it
-```
-public DishViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-    LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-    View view = layoutInflater.inflate(R.layout.row_view, parent, false);
-    return new DishViewHolder(view);    // Create actual instance of ViewHolder and return it
-}
-```
-* Modify `onBindViewHolder` to bind data with actual view
-    * called when actual view is added
-```
-public void onBindViewHolder(@NonNull DishViewHolder holder, int position) {
-    holder.dishImage.setImageResource(dishList.get(position).getDishImage());
-    holder.dishName.setText(String.valueOf(dishList.get(position).getDishName()));
-    holder.dishRating.setRating(dishList.get(position).getDishRating());
 
-    holder.dishImage.setOnClickListener(new View.OnClickListener() {
-        public void onClick(View v) {
-            // Do something in response to image click
-            Toast.makeText(context, dishList.get(position).toString(), Toast.LENGTH_SHORT).show();
-        }
-    });
-}
-```
-* Modify `getItemCount` (optional)
-    * represent the number of views in a recycler view
-```
-public int getItemCount()  {
-    return (dishList != null ? dishList.size() : 0);
-}
-```
-* In MainActivity, define `Layout Manager`
-* In MainActivity, attach `adapter` to `recyclerView`
-```
-recyclerView.setLayoutManager(new LinearLayoutManager(this));
-recyclerView.setAdapter(dishAdapter);
-```
-
-## Screenshot
-<img src="https://github.com/chanlenium/Android-Mobile-App/blob/main/05_Introduction%20to%20Recycler%20View/Lab03/Lab3Screenshot.png" width="900" height="350" />
+## Video Recoding
+* Video link : https://github.com/chanlenium/Android-Mobile-App/blob/main/08_Data%20Persistence%20in%20android/Lab05_Screen%20Recording.mov

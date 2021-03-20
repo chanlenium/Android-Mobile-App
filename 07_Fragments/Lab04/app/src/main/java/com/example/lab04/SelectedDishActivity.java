@@ -15,7 +15,6 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.lab04.models.Dish;
 
-import static com.example.lab04.R.id;
 import static com.example.lab04.R.layout;
 
 public class SelectedDishActivity extends AppCompatActivity {
@@ -35,7 +34,6 @@ public class SelectedDishActivity extends AppCompatActivity {
         // Activity can get reference to fragment using FragmentManager
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(id.selectedDishFrag,
-                SelectedDishFragment.newInstance(selectedDish, selectedDish.getDishName(), "Rating: " + String.valueOf(selectedDish.getDishRating()), selectedDish.getDishImage())).commit();
+        fragmentTransaction.add(R.id.selectedDishFrag, SelectedDishFragment.newInstance(selectedDish.getDishName(), "Rating: " + String.valueOf(selectedDish.getDishRating()), selectedDish.getDishImage())).commit();
     }
 }

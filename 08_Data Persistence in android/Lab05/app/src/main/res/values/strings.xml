@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Lab5</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lab5">Lab5</string>
+    <string name="user_name">User name</string>
+    <string name="add_user_to_file">Add user to file</string>
+    <string name="delete_file">Delete File</string>
+    <string name="display_users">Display users</string>
+    <string name="single_user_name">single User Name</string>
+    <string name="user_list">User List</string>
+</resources>

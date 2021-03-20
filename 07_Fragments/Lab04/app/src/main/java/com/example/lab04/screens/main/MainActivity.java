@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.lab04.DishListFragment;
+import com.example.lab04.screens.dishlist.DishListFragment;
 import com.example.lab04.R;
 
 public class MainActivity extends AppCompatActivity {

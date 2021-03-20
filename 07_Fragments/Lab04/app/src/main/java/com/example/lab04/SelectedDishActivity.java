@@ -6,16 +6,12 @@
 
 package com.example.lab04;
 
-import android.content.Intent;
-import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.lab04.models.Dish;
-
-import static com.example.lab04.R.layout;
+import android.content.Intent;
+import android.os.Bundle;
 
 public class SelectedDishActivity extends AppCompatActivity {
     private Dish selectedDish;
@@ -23,7 +19,7 @@ public class SelectedDishActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(layout.activity_selected_dish);
+        setContentView(R.layout.activity_selected_dish);
 
         // get the reference to the intent declared in MainActivity
         Intent intent = getIntent();

@@ -1,0 +1,654 @@
+[
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_steak_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xhdpi\\steak_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_hamburger_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxxhdpi\\hamburger_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_poutine_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxhdpi\\poutine_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_steak_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-mdpi\\steak_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_salmon_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxxhdpi\\salmon_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_selected_dish.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\layout\\activity_selected_dish.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_pasta_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-mdpi\\pasta_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_steak.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-hdpi\\steak.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_pasta_round.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-anydpi-v26\\pasta_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_sushi_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxxhdpi\\sushi_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_sushi.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-anydpi-v26\\sushi.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_salmon_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-mdpi\\salmon_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_pasta_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xhdpi\\pasta_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_pizza.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxhdpi\\pizza.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_pizza_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-mdpi\\pizza_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_poutine.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-hdpi\\poutine.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_pizza_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-hdpi\\pizza_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_steak_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxxhdpi\\steak_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_hamburger_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-mdpi\\hamburger_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_pasta.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-anydpi-v26\\pasta.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_sushi.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxxhdpi\\sushi.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_salmon.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-hdpi\\salmon.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_steak_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxxhdpi\\steak_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_rice_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xhdpi\\rice_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_rice.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-anydpi-v26\\rice.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_pasta.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxxhdpi\\pasta.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\drawable_salmon_background.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\drawable\\salmon_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_steak_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxhdpi\\steak_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_poutine.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xhdpi\\poutine.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_pasta_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xhdpi\\pasta_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_steak_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-mdpi\\steak_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_pizza_round.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-anydpi-v26\\pizza_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_hamburger.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxxhdpi\\hamburger.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_steak.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxxhdpi\\steak.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_rice.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxxhdpi\\rice.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_poutine_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxxhdpi\\poutine_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_pasta_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-hdpi\\pasta_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_pizza_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xhdpi\\pizza_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_poutine_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xhdpi\\poutine_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pizza_background.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\drawable\\pizza_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_hamburger.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-anydpi-v26\\hamburger.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_rice.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-hdpi\\rice.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_rice_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxxhdpi\\rice_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_sushi_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxhdpi\\sushi_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_hamburger_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxhdpi\\hamburger_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_poutine_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-hdpi\\poutine_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_steak.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxhdpi\\steak.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_hamburger_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-hdpi\\hamburger_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_steak_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxhdpi\\steak_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_hamburger.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-mdpi\\hamburger.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_rice_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxhdpi\\rice_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_pizza.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-hdpi\\pizza.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\drawable_steak_background.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\drawable\\steak_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_pasta_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxhdpi\\pasta_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_sushi.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxhdpi\\sushi.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_rice_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-hdpi\\rice_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_sushi.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xhdpi\\sushi.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_poutine.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxxhdpi\\poutine.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_hamburger_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxxhdpi\\hamburger_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_hamburger_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxhdpi\\hamburger_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_steak.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xhdpi\\steak.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\drawable_poutine_background.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\drawable\\poutine_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_rice.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xhdpi\\rice.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_poutine_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxhdpi\\poutine_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_pasta_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxxhdpi\\pasta_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_sushi_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxxhdpi\\sushi_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_salmon_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-hdpi\\salmon_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_rice_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xhdpi\\rice_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\drawable_sushi_background.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\drawable\\sushi_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_pasta_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxxhdpi\\pasta_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rice_background.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\drawable\\rice_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_pasta_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-mdpi\\pasta_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_salmon_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-hdpi\\salmon_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_sushi_round.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-anydpi-v26\\sushi_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_poutine_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-mdpi\\poutine_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_poutine.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-anydpi-v26\\poutine.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_poutine_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxxhdpi\\poutine_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_salmon.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xhdpi\\salmon.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_pizza_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxhdpi\\pizza_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_rice.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-mdpi\\rice.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_pasta.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-hdpi\\pasta.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_pizza.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xhdpi\\pizza.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_rice_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxxhdpi\\rice_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_pizza.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-mdpi\\pizza.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_poutine.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-mdpi\\poutine.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_sushi.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-mdpi\\sushi.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_pizza_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-mdpi\\pizza_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_steak_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-hdpi\\steak_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\drawable_hamburger_background.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\drawable\\hamburger_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_sushi.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-hdpi\\sushi.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_poutine.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxhdpi\\poutine.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_pizza_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxxhdpi\\pizza_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_rice.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxhdpi\\rice.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_pasta.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-mdpi\\pasta.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_hamburger.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxhdpi\\hamburger.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_salmon_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxhdpi\\salmon_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_pasta_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-hdpi\\pasta_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\drawable_pasta_background.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\drawable\\pasta_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_sushi_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xhdpi\\sushi_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_steak_round.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-anydpi-v26\\steak_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\layout_row_item.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\layout\\row_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_steak.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-anydpi-v26\\steak.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_sushi_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-hdpi\\sushi_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_pizza_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxhdpi\\pizza_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_pasta_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxhdpi\\pasta_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_hamburger.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xhdpi\\hamburger.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_steak_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xhdpi\\steak_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_selected_dish.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\layout\\fragment_selected_dish.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_poutine_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xhdpi\\poutine_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_rice_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxhdpi\\rice_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_salmon.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxxhdpi\\salmon.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_pizza_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-hdpi\\pizza_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_sushi_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-mdpi\\sushi_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_sushi_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-hdpi\\sushi_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_sushi_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxhdpi\\sushi_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_hamburger_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xhdpi\\hamburger_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_steak.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-mdpi\\steak.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_hamburger_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xhdpi\\hamburger_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_salmon_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xhdpi\\salmon_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_salmon.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-mdpi\\salmon.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_salmon_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxhdpi\\salmon_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_rice_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-hdpi\\rice_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_hamburger_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-hdpi\\hamburger_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_pizza_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxxhdpi\\pizza_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_hamburger_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-mdpi\\hamburger_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_pizza.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxxhdpi\\pizza.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_rice_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-mdpi\\rice_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_salmon_round.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-anydpi-v26\\salmon_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_poutine_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-hdpi\\poutine_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_poutine_round.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-anydpi-v26\\poutine_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_salmon_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xhdpi\\salmon_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_poutine_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-mdpi\\poutine_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_steak_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-hdpi\\steak_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_pizza_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xhdpi\\pizza_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_sushi_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xhdpi\\sushi_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_rice_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-mdpi\\rice_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_salmon.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxhdpi\\salmon.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_rice_round.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-anydpi-v26\\rice_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_salmon_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-mdpi\\salmon_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_pasta.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xhdpi\\pasta.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_hamburger.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-hdpi\\hamburger.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_salmon_foreground.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxxhdpi\\salmon_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_hamburger_round.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-anydpi-v26\\hamburger_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_pizza.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-anydpi-v26\\pizza.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_sushi_round.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-mdpi\\sushi_round.png"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_dish_list.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\layout\\fragment_dish_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_salmon.xml.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-anydpi-v26\\salmon.xml"
+    },
+    {
+        "merged": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_pasta.png.flat",
+        "source": "C:\\Users\\k\\Documents\\GitHub\\Android-Mobile-App\\07_Fragments\\Lab04\\app\\src\\main\\res\\mipmap-xxhdpi\\pasta.png"
+    }
+]

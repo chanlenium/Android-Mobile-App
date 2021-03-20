@@ -1,0 +1,22 @@
+com/example/lab04/MainViewModel.java
+ com.example.lab04.MainViewModel
+ com.example.lab04.MainViewModel$1
+com/example/lab04/DishRecyclerViewAdapter.java
+ com.example.lab04.DishRecyclerViewAdapter
+ com.example.lab04.DishRecyclerViewAdapter$1
+ com.example.lab04.DishRecyclerViewAdapter$2
+ com.example.lab04.DishRecyclerViewAdapter$3
+ com.example.lab04.DishRecyclerViewAdapter$ViewHolder
+com/example/lab04/DishListFragment.java
+ com.example.lab04.DishListFragment
+com/example/lab04/SelectedDishFragment.java
+ com.example.lab04.SelectedDishFragment
+com/example/lab04/SelectedDishActivity.java
+ com.example.lab04.SelectedDishActivity
+com/example/lab04/Dish.java
+ com.example.lab04.Dish
+ com.example.lab04.Dish$1
+com/example/lab04/MainActivity.java
+ com.example.lab04.MainActivity
+com/example/lab04/BuildConfig.java
+ com.example.lab04.BuildConfig

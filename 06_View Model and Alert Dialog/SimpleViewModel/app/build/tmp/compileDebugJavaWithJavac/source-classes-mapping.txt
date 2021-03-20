@@ -1,0 +1,6 @@
+com/example/simpleviewmodel/BuildConfig.java
+ com.example.simpleviewmodel.BuildConfig
+com/example/simpleviewmodel/MyViewModel.java
+ com.example.simpleviewmodel.MyViewModel
+com/example/simpleviewmodel/MainActivity.java
+ com.example.simpleviewmodel.MainActivity

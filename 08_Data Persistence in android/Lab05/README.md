@@ -16,6 +16,7 @@ public boolean onCreateOptionsMenu(Menu menu) {
     return true;
 }
 ```
+
 * When the user selects an item from the options menu, the system calls your activity's onOptionsItemSelected() method
 ```
 public boolean onOptionsItemSelected(@NonNull MenuItem item) {

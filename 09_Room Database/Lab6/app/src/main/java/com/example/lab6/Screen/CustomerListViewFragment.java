@@ -64,11 +64,10 @@ public class CustomerListViewFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_customer_list_view, container, false);
-        // associate fields in this class with components of view(fragment_selected_dish.xml)
+        // associate fields in this class with components of view(fragment_customer_list_view.xml)
         recyclerView = view.findViewById(R.id.customerListRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));   // associated with LayoutManager
         recyclerView.setAdapter(new CustomerRecyclerViewAdapter(customerList, getActivity()));
-
         return view;
     }
 }

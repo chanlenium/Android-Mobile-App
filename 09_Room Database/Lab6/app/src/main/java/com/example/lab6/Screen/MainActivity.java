@@ -2,6 +2,9 @@ package com.example.lab6.Screen;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,26 +21,71 @@ import android.widget.Toast;
 
 import com.example.lab6.Database.MyDatabase;
 import com.example.lab6.Model.Customer;
+import com.example.lab6.Model.CustomerViewModel;
 import com.example.lab6.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    private MyDatabase myDatabase;    // reference to db
-    private EditText custNameEt;
-    private RatingBar ratingBar;
-    private TextView commentsTml;
+    private EditText customerNameEt;    // reference to UI customer name
+    private RatingBar ratingBar;        // reference to UI ratingbar
+    private TextView commentLine;       // reference to UI commentLine
+    private CustomerViewModel model;    // reference to ViewModel
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        myDatabase =MyDatabase.getInstance(this);
-        custNameEt = findViewById(R.id.custNameEt);
+        initUI();   // UI initialization
+
+        // creating viewModel object
+        model = new ViewModelProvider(this).get(CustomerViewModel.class);
+        // Since model.customerList is "LiveData" by executing customerDao.getAll()
+        // observer can update its state whenever the value of model.customerList is changed
+        model.customerList.observe(this, new Observer<List<Customer>>() {
+            @Override
+            public void onChanged(List<Customer> customers) {
+                // Whenever the value of model.customerList is changed, the App prints its elements
+                for(Customer customer : customers){
+                    Log.d("User", customer.getName());
+                }
+            }
+        });
+    }
+
+    private void initUI() {
+        customerNameEt = findViewById(R.id.custNameEt);
         ratingBar = findViewById(R.id.ratingBar);
-        commentsTml = findViewById(R.id.commentsTml);
+        commentLine = findViewById(R.id.commentsTml);
+    }
+
+    // When the "SAVE USER" button is clicked..
+    public void saveUser(View view) throws InterruptedException {
+        String name = customerNameEt.getText().toString();
+        double rating = ratingBar.getRating();
+        String comment = commentLine.getText().toString();
+
+        if(name.trim().equals("") || rating == 0 || comment.trim().equals("")){ // check all fields are filled
+            Toast.makeText(this, "All fields must be filled", Toast.LENGTH_SHORT).show();
+        }else{
+            // check input user is already in a list or not
+            Customer searchedCustomer = model.getCustomer(name);
+            if(searchedCustomer != null){
+                Toast.makeText(this, "This user is already registered", Toast.LENGTH_SHORT).show();
+            }else{
+                // if input user is a new user, the app create user object and insert the user into a DB
+                Customer customer = new Customer(name, rating, comment);
+                model.insert(customer);
+
+                // clear UI elements
+                customerNameEt.setText("");
+                ratingBar.setRating(0);
+                commentLine.setText("");
+                Toast.makeText(this, "Done", Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 
     /** Creating an Options Menu **/
@@ -51,27 +99,6 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    public void saveUser(View view) {
-        String name = custNameEt.getText().toString();
-        double rating = ratingBar.getRating();
-        String comment = commentsTml.getText().toString();
-
-        if(name.trim().equals("") || rating == 0 || comment.trim().equals("")){
-            Toast.makeText(this, "All fields must be filled", Toast.LENGTH_SHORT).show();
-        }else{
-            Customer customer = new Customer(name, rating, comment);
-            Customer cust = myDatabase.customerDao().getCustomer(customer.getName());
-            if(cust != null){
-                Toast.makeText(this, "The customer is already registered", Toast.LENGTH_SHORT).show();
-            }else{
-                myDatabase.customerDao().addCustomer(customer); // background thread
-                custNameEt.setText("");
-                ratingBar.setRating(0);
-                commentsTml.setText("");
-                Toast.makeText(this, "Done", Toast.LENGTH_SHORT).show();
-            }
-        }
-    }
 
     /** Handling click events **/
     // When the user selects an item from the options menu,
@@ -81,12 +108,11 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         if(id == R.id.pageMenuOption){
-            Intent intent = new Intent(this, FeedbackActivity.class);
-            List<Customer> customerList = myDatabase.customerDao().getAll();
-            for(Customer customer : customerList){
-                Log.d("Customer", customer.getName());
-            }
-            intent.putParcelableArrayListExtra("FeedbackPage", (ArrayList<? extends Parcelable>) customerList);
+            Intent intent = new Intent(this, FeedbackActivity.class);   // explicit intent
+            model.customerList.observe(this, currentValue -> {
+                // In here, currentValue is user list got from @Query("select * from customers")
+                intent.putParcelableArrayListExtra("FeedbackPage", (ArrayList<? extends Parcelable>) currentValue);
+            });
             startActivity(intent);
             Toast.makeText(this, "Feedback Activity page", Toast.LENGTH_SHORT).show();
             return true;

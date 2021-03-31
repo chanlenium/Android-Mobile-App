@@ -10,7 +10,12 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef2b341f-4ebe-438e-ae0d-ab2900146bbb" name="Default Changelist" comment="" />
+    <list default="true" id="ef2b341f-4ebe-438e-ae0d-ab2900146bbb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../07_Fragments/Lab04/app/src/main/java/com/example/lab04/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../07_Fragments/Lab04/app/src/main/java/com/example/lab04/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../07_Fragments/Lab04/app/src/main/java/com/example/lab04/SelectedDishActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../07_Fragments/Lab04/app/src/main/java/com/example/lab04/SelectedDishActivity.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +34,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectId" id="1pau6hhP6U44Q6fWeT6ZBkWvard" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -37,6 +46,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ViewModel" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -126,6 +136,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="481" y="130" key="AndroidCreateXmlResourceDialog/0.0.1280.680@0.0.1280.680" timestamp="1615437597076" />
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1616918845854">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1616918845854" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1615437925158">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

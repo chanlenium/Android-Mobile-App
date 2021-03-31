@@ -6,14 +6,14 @@
 
 package com.example.lab04;
 
+import android.content.Intent;
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
-import android.os.Bundle;
-
-public class SelectedDishActivity extends AppCompatActivity {
+public class SelectedDishActivity {
     private Dish selectedDish;
 
     @Override

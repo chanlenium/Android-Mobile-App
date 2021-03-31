@@ -1,8 +1,11 @@
 package com.example.lab6.Database;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
+import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Update;
 
 import com.example.lab6.Model.Customer;
 
@@ -10,13 +13,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Dao
-public interface CustomerDao {
+public interface CustomerDao {  // define queries
     @Insert
-    public void addCustomer(Customer customer);
-
-    @Query("select * from customers")
-    public List<Customer> getAll();
+    void insert(Customer customer);
 
     @Query("select * from customers where user_name LIKE :name")
-    public Customer getCustomer(String name);
+    Customer getCustomer(String name);
+
+//    @Update
+//    void update(Customer customer);
+//
+//    @Delete
+//    void delete(Customer customer);
+
+    @Query("select * from customers")
+    LiveData<List<Customer>> getAll();
 }

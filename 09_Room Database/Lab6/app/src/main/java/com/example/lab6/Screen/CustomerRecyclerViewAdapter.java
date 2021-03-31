@@ -33,7 +33,7 @@ public class CustomerRecyclerViewAdapter extends RecyclerView.Adapter<CustomerRe
 
         // Transfer XML to an object and create each row(View object) using LayoutInflater
         // Inflate the layout for this ViewHolder
-        // In here, view indicate "row_item.xml"
+        // In here, view indicate "customer_row.xml"
         View view = layoutInflater.inflate(R.layout.customer_row, parent, false);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;    // Create actual instance of ViewHolder and return it

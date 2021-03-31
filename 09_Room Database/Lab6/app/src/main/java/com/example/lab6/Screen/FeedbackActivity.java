@@ -14,8 +14,10 @@ import com.example.lab6.R;
 import java.util.List;
 
 public class FeedbackActivity extends AppCompatActivity {
-    Intent intent;
-    List<Customer> customerList;
+    private Intent intent;  // reference to intent
+    private List<Customer> customerList;    // reference to List<Customer>
+    private FragmentManager fragmentManager;    // reference to FragmentManager
+    private FragmentTransaction fragmentTransaction;    // reference to FragmentTransaction
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,15 +28,9 @@ public class FeedbackActivity extends AppCompatActivity {
             customerList = intent.getParcelableArrayListExtra("FeedbackPage");
         }
 
-        for(Customer customer : customerList){
-            Log.d("Customer", String.valueOf(customer.getRating()));
-        }
-
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentManager = getSupportFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.feedbackFragment,
                 CustomerListViewFragment.newInstance(customerList)).commit();
-
-        //fragmentTransaction.add(R.id.userListViewFragment, new UserListViewFragment(userList)).commit();
     }
 }

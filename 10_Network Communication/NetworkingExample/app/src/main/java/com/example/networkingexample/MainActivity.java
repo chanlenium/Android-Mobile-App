@@ -11,6 +11,10 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -33,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     public void getData(View view) {
         //String url = "https://www.google.com";
         String url = "https://jsonplaceholder.typicode.com/todos";  // JSON object
+        //String url = "https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=38cd5e43dd1cde2fa439c578e7401538";
         if(isConnnected()){
             Toast.makeText(this, " connected", Toast.LENGTH_SHORT).show();
             new Thread(new Runnable() {
@@ -43,6 +48,24 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             tv.setText(data);
+                            try {
+//                                JSONObject response = new JSONObject(data);
+//                                JSONObject coordObject = response.getJSONObject("coord");
+//                                Log.d(TAG, "run: coordObject = " + coordObject);
+//                                Log.d(TAG, "run: coordObject = " + coordObject.get("lon"));
+//                                Log.d(TAG, "run: coordObject = " + coordObject.get("lat"));
+
+                                JSONArray response = new JSONArray(data);
+                                for (int i = 0; i < response.length(); i++){
+                                    JSONObject jsonObject = (JSONObject) response.get(i);
+                                    //String title = jsonObject.getString("title");
+                                    //Log.d(TAG, "run: title = " + title);
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                                Log.d(TAG, "run: error in creating JSON object ");
+                            }
+
                         }
                     });
                     // tv.setText(data);   // cannot modify UI element from background => cause crash!

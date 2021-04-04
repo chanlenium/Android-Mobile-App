@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         weatherViewModel = new ViewModelProvider(this).get(WeatherViewModel.class); // creating viewModel object
-        initUi();
+        initUi();   // initialize User Interface
         fragmentManager = getSupportFragmentManager();  // Activity can get reference to fragment using FragmentManager
         // To make fragment transactions in the activity(add, remove, or replace), use APIs from FragmentTransaction
         fragmentTransaction = fragmentManager.beginTransaction();
@@ -48,12 +48,14 @@ public class MainActivity extends AppCompatActivity {
         cityNameEt = findViewById(R.id.cityNameEt);
         weatherViewModel.getWeather().observe(this, currentValue -> {
             cityNameEt.setText(currentValue.getCityName());
-        });
+        }); // set initial value into cityNameEt
         //cityNameEt.setText("");   // When not using viewModel
     }
 
+    // click event
     public void findWeather(View view) {
-        String city = cityNameEt.getText().toString();
+        String city = cityNameEt.getText().toString();  // get string from edit text
+        // make URL and store it into variable
         String url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=f750ec08d2971618228ed8326824270a";
 
         if(cityNameEt.getText().toString().isEmpty()){  // check input is empty or not
@@ -61,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         }else{
             if(isConnnected()){ // check network is connected or not
                 //Toast.makeText(this, " connected", Toast.LENGTH_SHORT).show();
-                new Thread(new Runnable() {
+                new Thread(new Runnable() { // background working
                     @Override
                     public void run() {
                         String data = downloadData(url);    // download data from url
@@ -78,15 +80,16 @@ public class MainActivity extends AppCompatActivity {
                                     Log.d(TAG, "Longitude : " + response.getJSONObject("coord").getString("lon"));
 
                                     // Change Kelvin into Celsius
-                                    int temperatureCelcius = (int) (Float.parseFloat(response.getJSONObject("main").getString("temp")) -273.15 );
+                                    int temperatureCelsius = (int) (Float.parseFloat(response.getJSONObject("main").getString("temp")) -273.15 );
                                     weatherModel = new WeatherModel(
                                             cityNameEt.getText().toString().trim(),
                                             ((JSONObject) response.getJSONArray("weather").get(0)).getString("icon"),
                                             ((JSONObject) response.getJSONArray("weather").get(0)).getString("main"),
-                                            temperatureCelcius,
+                                            temperatureCelsius,
                                             Float.valueOf(response.getJSONObject("coord").getString("lat")),
                                             Float.valueOf(response.getJSONObject("coord").getString("lon")));
 
+                                    // set value into ViewModel
                                     weatherViewModel.setWeatherViewModel(weatherModel);
 
                                     if(fragmentTransaction.isEmpty()){
@@ -95,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
                                         //fragmentTransaction.add(R.id.weatherDetail, WeatherResponseFragment.newInstance(weatherModel)).commit();
                                     }else{
                                         fragmentTransaction = fragmentManager.beginTransaction();
-                                        fragmentTransaction.add(R.id.weatherDetail, new WeatherResponseFragment(weatherViewModel)).commit();
+                                        fragmentTransaction.replace(R.id.weatherDetail, new WeatherResponseFragment(weatherViewModel)).commit();
                                         // When not using ViewModel
                                         //fragmentTransaction.replace(R.id.weatherDetail, WeatherResponseFragment.newInstance(weatherModel)).commit();
                                     }
@@ -114,11 +117,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // Getting good connection and downloading data (Must be done in a background using Thread)
     private String downloadData(String url) {
         InputStream inputStream = null;
         String data = "";
         try {
-            // Getting good connection and downloading data (Must be done in a background)
             URL myUrl = new URL(url);   // convert url string to URL object
             HttpURLConnection httpURLConnection = (HttpURLConnection) myUrl.openConnection();
             httpURLConnection.setRequestMethod("GET");    // to retrieve information from server

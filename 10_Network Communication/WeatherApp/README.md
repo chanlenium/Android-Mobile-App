@@ -119,4 +119,4 @@ fragmentTransaction.add(R.id.weatherDetail, new WeatherResponseFragment(weatherV
 ```
 
 ## Screenshots
-* link : https://github.com/chanlenium/Android-Mobile-App/tree/main/09_Room%20Database/Lab6/screenshots
+<img src="https://github.com/chanlenium/Android-Mobile-App/blob/main/10_Network%20Communication/WeatherApp/screenshots.png"> 

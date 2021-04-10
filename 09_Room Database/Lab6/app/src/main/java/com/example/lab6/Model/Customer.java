@@ -7,16 +7,21 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModel;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "customers")    // change table name as "users"
 public class Customer implements Parcelable {
-    @PrimaryKey
-    @NonNull
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "user_id")
+    private int id;
+
     @ColumnInfo(name = "user_name")
     private String name;
+
     @ColumnInfo(name = "user_rating")
     private double rating;
+
     @ColumnInfo(name = "user_comment")
     private String comment;
 
@@ -28,6 +33,7 @@ public class Customer implements Parcelable {
     }
 
     protected Customer(Parcel in) {
+        id = in.readInt();
         name = in.readString();
         rating = in.readDouble();
         comment = in.readString();
@@ -44,6 +50,14 @@ public class Customer implements Parcelable {
             return new Customer[size];
         }
     };
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -76,6 +90,7 @@ public class Customer implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(id);
         dest.writeString(name);
         dest.writeDouble(rating);
         dest.writeString(comment);

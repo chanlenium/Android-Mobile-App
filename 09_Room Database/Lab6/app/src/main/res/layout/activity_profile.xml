@@ -7,10 +7,10 @@
     tools:context=".Screen.MainActivity">
 
     <TextView
-        android:id="@+id/mainTitleTv"
+        android:id="@+id/customerDetailTitleTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Customer opinion"
+        android:text="Customer detail"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="0.066" />
 
     <TextView
-        android:id="@+id/userDetailNameTv"
+        android:id="@+id/customerDetailNameTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -29,10 +29,10 @@
         android:text="Name"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainTitleTv" />
+        app:layout_constraintTop_toBottomOf="@+id/customerDetailTitleTv" />
 
     <EditText
-        android:id="@+id/custNameEt"
+        android:id="@+id/customerDetailNameEt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -44,10 +44,10 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/userDetailNameTv"
-        app:layout_constraintTop_toBottomOf="@+id/mainTitleTv" />
+        app:layout_constraintTop_toBottomOf="@+id/customerDetailTitleTv" />
 
     <TextView
-        android:id="@+id/ratingTv"
+        android:id="@+id/customerDetailRatingTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -55,10 +55,10 @@
         android:text="Rating"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userDetailNameTv" />
+        app:layout_constraintTop_toBottomOf="@+id/customerDetailNameTv" />
 
     <RatingBar
-        android:id="@+id/ratingBar"
+        android:id="@+id/customerDetailRatingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -66,10 +66,10 @@
         android:layout_marginEnd="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ratingTv"
-        app:layout_constraintTop_toBottomOf="@+id/custNameEt" />
+        app:layout_constraintTop_toBottomOf="@+id/customerDetailNameEt" />
 
     <TextView
-        android:id="@+id/commentsTv"
+        android:id="@+id/customerDetailCommentsTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -77,12 +77,12 @@
         android:text="Comments"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ratingTv" />
+        app:layout_constraintTop_toBottomOf="@+id/customerDetailRatingTv" />
 
     <EditText
-        android:id="@+id/commentsTml"
-        android:layout_width="359dp"
-        android:layout_height="146dp"
+        android:id="@+id/customerDetailComments"
+        android:layout_width="355dp"
+        android:layout_height="71dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/comment_textview_boader"
         android:ems="10"
@@ -90,20 +90,32 @@
         android:inputType="textMultiLine"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.692"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/commentsTv" />
+        app:layout_constraintTop_toBottomOf="@+id/customerDetailCommentsTv" />
 
     <Button
-        android:id="@+id/saveBtn"
+        android:id="@+id/editBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:onClick="saveUser"
-        android:text="Save customer"
+        android:text="Edit Customer"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/commentsTml" />
+        app:layout_constraintTop_toBottomOf="@+id/customerDetailComments" />
+
+    <Button
+        android:id="@+id/deleteBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Delete Customer"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

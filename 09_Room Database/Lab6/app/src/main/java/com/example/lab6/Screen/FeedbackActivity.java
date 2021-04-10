@@ -6,7 +6,6 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 
 import com.example.lab6.Model.Customer;
 import com.example.lab6.R;

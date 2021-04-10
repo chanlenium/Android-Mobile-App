@@ -9,7 +9,6 @@ import androidx.room.Update;
 
 import com.example.lab6.Model.Customer;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Dao
@@ -20,11 +19,11 @@ public interface CustomerDao {  // define queries
     @Query("select * from customers where user_name LIKE :name")
     Customer getCustomer(String name);
 
-//    @Update
-//    void update(Customer customer);
-//
-//    @Delete
-//    void delete(Customer customer);
+    @Update
+    void update(Customer customer);
+
+    @Delete
+    void delete(Customer customer);
 
     @Query("select * from customers")
     LiveData<List<Customer>> getAll();

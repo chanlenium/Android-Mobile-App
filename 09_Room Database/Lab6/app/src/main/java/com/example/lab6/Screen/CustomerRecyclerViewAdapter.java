@@ -1,28 +1,43 @@
 package com.example.lab6.Screen;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.lab6.Model.Customer;
+import com.example.lab6.Model.CustomerViewModel;
 import com.example.lab6.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CustomerRecyclerViewAdapter extends RecyclerView.Adapter<CustomerRecyclerViewAdapter.ViewHolder>{
-    private ArrayList<Customer> userList;
-    private Context context;
+    private List<Customer> userList;
+    //private Context context;
+    private RecyclerViewClickListener listener;
 
     // Constructor of Adapter class
-    public CustomerRecyclerViewAdapter(ArrayList<Customer> userList, Context context) {
+//    public CustomerRecyclerViewAdapter(List<Customer> userList, Context context) {
+//        this.userList = userList;
+//        this.context = context;
+//    }
+
+    // Constructor of Adapter class
+    public CustomerRecyclerViewAdapter(List<Customer> userList, RecyclerViewClickListener listener) {
         this.userList = userList;
-        this.context = context;
+        this.listener = listener;
+    }
+
+    public interface RecyclerViewClickListener{
+        void onClick(View v, int position);
     }
 
     @NonNull
@@ -51,7 +66,7 @@ public class CustomerRecyclerViewAdapter extends RecyclerView.Adapter<CustomerRe
         return (userList != null ? userList.size() : 0);
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         private TextView userName;
         private RatingBar usreRatingBar;
         private TextView userComment;
@@ -61,6 +76,13 @@ public class CustomerRecyclerViewAdapter extends RecyclerView.Adapter<CustomerRe
             userName = itemView.findViewById(R.id.rowCustName);
             usreRatingBar = itemView.findViewById(R.id.rowRatingBar);
             userComment = itemView.findViewById(R.id.rowCustComment);
+
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            listener.onClick(view, getAdapterPosition());
         }
     }
 }

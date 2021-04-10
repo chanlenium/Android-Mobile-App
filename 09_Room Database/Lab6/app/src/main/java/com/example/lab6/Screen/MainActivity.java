@@ -2,7 +2,6 @@ package com.example.lab6.Screen;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.LiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -19,7 +18,6 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.lab6.Database.MyDatabase;
 import com.example.lab6.Model.Customer;
 import com.example.lab6.Model.CustomerViewModel;
 import com.example.lab6.R;
@@ -38,10 +36,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        initUI();   // UI initialization
-
         // creating viewModel object
         model = new ViewModelProvider(this).get(CustomerViewModel.class);
+        initUI();   // UI initialization
+
         // Since model.customerList is "LiveData" by executing customerDao.getAll()
         // observer can update its state whenever the value of model.customerList is changed
         model.customerList.observe(this, new Observer<List<Customer>>() {
@@ -49,7 +47,10 @@ public class MainActivity extends AppCompatActivity {
             public void onChanged(List<Customer> customers) {
                 // Whenever the value of model.customerList is changed, the App prints its elements
                 for(Customer customer : customers){
-                    Log.d("User", customer.getName());
+                    Log.d("Main", "ID : " + customer.getId());
+                    Log.d("Main", "Name : " + customer.getName());
+                    Log.d("Main", "Rating : " + customer.getRating());
+                    Log.d("Main", "Comment : " + customer.getComment());
                 }
             }
         });
@@ -99,7 +100,6 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-
     /** Handling click events **/
     // When the user selects an item from the options menu,
     // the system calls your activity's onOptionsItemSelected() method.
@@ -110,7 +110,6 @@ public class MainActivity extends AppCompatActivity {
         if(id == R.id.pageMenuOption){
             Intent intent = new Intent(this, FeedbackActivity.class);   // explicit intent
             model.customerList.observe(this, currentValue -> {
-                // In here, currentValue is user list got from @Query("select * from customers")
                 intent.putParcelableArrayListExtra("FeedbackPage", (ArrayList<? extends Parcelable>) currentValue);
             });
             startActivity(intent);

@@ -7,7 +7,6 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
@@ -29,9 +28,7 @@ public class MainActivity extends AppCompatActivity {
 //        weatherViewModel = new WeatherViewModelFactory().create(WeatherViewModel.class); // Factory를 사용해서 생성 하는 방법도 있음.
 
         weatherViewModel = new ViewModelProvider(this).get(WeatherViewModel.class); // creating viewModel object
-        weatherViewModel.weatherData.observe(this, weatherData -> {
-            Log.e("====","data : " + weatherData.getCityName());
-
+        weatherViewModel.weatherData.observe(this, weatherData -> { // liveData를 UI에서 (Activity나 fragment) observe하고 data가 변경되거나 하면 아래 listener로 data가 전달됨
             if(fragmentTransaction.isEmpty()){
                 fragmentTransaction.add(R.id.weatherDetail, new WeatherResponseFragment(weatherData)).commit();
                 // When not using ViewModel

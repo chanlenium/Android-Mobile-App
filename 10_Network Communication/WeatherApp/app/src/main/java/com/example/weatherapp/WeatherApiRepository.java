@@ -13,6 +13,9 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+
+// 서버나 database에서 data를 받아오는 로직은 전부 Repository라는 class를 만들어서 처리 해야 함.
+// ViewModel은 repository에서 받은 데이터를 UI에서 사용하기 편하게 가공한후 (가공이 필요한 경우) livedata를 updata하는 방식으로 UI에 전달함.
 public class WeatherApiRepository {
     final String TAG = "WeatherApiRepository";
 
@@ -86,5 +89,5 @@ public class WeatherApiRepository {
         }
         return stringBuilder.toString();
     }
-    
+
 }

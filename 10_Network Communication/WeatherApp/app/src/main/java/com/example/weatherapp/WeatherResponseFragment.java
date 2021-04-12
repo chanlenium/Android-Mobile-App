@@ -16,15 +16,15 @@ public class WeatherResponseFragment extends Fragment {
 //    private static final String ARG_PARAM = "param";
 //    private WeatherModel weatherModel;
 
-    private WeatherViewModel weatherViewModel;
+    private WeatherModel weatherModel;
     private TextView cityNameTv, temperatureTv, weatherDescriptionTv, latitudeTv, longitudeTv;
     private ImageView weatherIv;
 
     public WeatherResponseFragment() {
     }
 
-    public WeatherResponseFragment(WeatherViewModel weatherViewModel) {
-        this.weatherViewModel = weatherViewModel;
+    public WeatherResponseFragment(WeatherModel weatherModel) {
+        this.weatherModel = weatherModel;
     }
 
 //    /** When not using ViewModel
@@ -41,7 +41,6 @@ public class WeatherResponseFragment extends Fragment {
 //        fragment.setArguments(args);
 //        return fragment;
 //    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,17 +65,16 @@ public class WeatherResponseFragment extends Fragment {
         weatherIv = view.findViewById(R.id.weatherIv);
 
         // set values using ViewModel
-        weatherViewModel.getWeather().observe(this, currentValue ->{
-            cityNameTv.setText("The weather of city " + currentValue.getCityName().toUpperCase());
-            temperatureTv.setText(currentValue.getWeatherTemperature() + " \u2103");
-            weatherDescriptionTv.setText(currentValue.getWeatherDescription());
-            latitudeTv.setText(currentValue.getLatitude() + "\u00B0");
-            longitudeTv.setText(currentValue.getLongitude() + "\u00B0");
-            Glide.with(this)
-                .load("https://openweathermap.org/img/w/" + currentValue.getWeatherIcon() + ".png")
+        cityNameTv.setText("The weather of city " + weatherModel.getCityName().toUpperCase());
+        temperatureTv.setText(weatherModel.getWeatherTemperature() + " \u2103");
+        weatherDescriptionTv.setText(weatherModel.getWeatherDescription());
+        latitudeTv.setText(weatherModel.getLatitude() + "\u00B0");
+        longitudeTv.setText(weatherModel.getLongitude() + "\u00B0");
+        Glide.with(this)
+                .load("https://openweathermap.org/img/w/" + weatherModel.getWeatherIcon() + ".png")
                 .override(300, 300)
                 .into(weatherIv);
-        });
+
 
         // set values when not using ViewModel
 //        cityNameTv.setText("The weather of city " + weatherModel.cityName.toUpperCase());

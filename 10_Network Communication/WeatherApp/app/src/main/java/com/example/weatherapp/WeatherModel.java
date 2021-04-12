@@ -4,12 +4,12 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class WeatherModel implements Parcelable {
-    String cityName;
-    String weatherIcon;
-    String weatherDescription;
-    int weatherTemperature;
-    Float latitude;
-    Float longitude;
+    private String cityName;
+    private String weatherIcon;
+    private String weatherDescription;
+    private int weatherTemperature;
+    private Float latitude;
+    private Float longitude;
 
     public WeatherModel(String cityName, String weatherIcon, String weatherDescription, int weatherTemperature, Float latitude, Float longitude) {
         this.cityName = cityName;

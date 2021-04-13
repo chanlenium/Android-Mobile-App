@@ -64,7 +64,7 @@ public class CustomerListViewFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        setOnClickListener();
+        setOnClickListener();   // call a 'setOnClickListener' function
         CustomerRecyclerViewAdapter adapter = new CustomerRecyclerViewAdapter(customerList, listener);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         // Inflate the layout for this fragment
@@ -77,11 +77,12 @@ public class CustomerListViewFragment extends Fragment {
     }
 
     private void setOnClickListener() {
+        // define listener
         listener = new CustomerRecyclerViewAdapter.RecyclerViewClickListener() {
             @Override
-            public void onClick(View v, int position) {
+            public void onClick(View v, int position) { // callback function when clicking
                 Intent intent = new Intent(getContext(), ProfileActivity.class);
-                intent.putExtra("selectedCustomer", customerList.get(position));
+                intent.putExtra("selectedCustomer", customerList.get(position));    // pass customer
                 startActivity(intent);
             }
         };

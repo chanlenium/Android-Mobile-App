@@ -25,19 +25,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        weatherViewModel = new WeatherViewModelFactory().create(WeatherViewModel.class); // Factory를 사용해서 생성 하는 방법도 있음.
+        //weatherViewModel = new WeatherViewModelFactory().create(WeatherViewModel.class); // Factory를 사용해서 생성 하는 방법도 있음.
 
         weatherViewModel = new ViewModelProvider(this).get(WeatherViewModel.class); // creating viewModel object
-        weatherViewModel.weatherData.observe(this, weatherData -> { // liveData를 UI에서 (Activity나 fragment) observe하고 data가 변경되거나 하면 아래 listener로 data가 전달됨
+        weatherViewModel.weatherData.observe(this, weatherData -> {
+            // LiveData를 UI에서(Activity or Fragment) observe하면, data 변경시 아래 listener로 data가 전달됨
             if(fragmentTransaction.isEmpty()){
                 fragmentTransaction.add(R.id.weatherDetail, new WeatherResponseFragment(weatherData)).commit();
-                // When not using ViewModel
-                //fragmentTransaction.add(R.id.weatherDetail, WeatherResponseFragment.newInstance(weatherModel)).commit();
             }else{
                 fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.weatherDetail, new WeatherResponseFragment(weatherData)).commit();
-                // When not using ViewModel
-                //fragmentTransaction.replace(R.id.weatherDetail, WeatherResponseFragment.newInstance(weatherModel)).commit();
             }
         });
 
@@ -58,5 +55,4 @@ public class MainActivity extends AppCompatActivity {
             weatherViewModel.getWeatherByCity(city, this);
         }
     }
-
 }

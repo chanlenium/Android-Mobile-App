@@ -27,28 +27,9 @@ public class WeatherResponseFragment extends Fragment {
         this.weatherModel = weatherModel;
     }
 
-//    /** When not using ViewModel
-//     * Use this factory method to create a new instance of
-//     * this fragment using the provided parameters.
-//     * @param weatherModel Parameter 1.
-//     * @return A new instance of fragment WeatherResponseFragment.
-//     */
-//    public static WeatherResponseFragment newInstance(WeatherModel weatherModel) {
-//        this.weatherViewModel = weatherModel;
-//        WeatherResponseFragment fragment = new WeatherResponseFragment(weatherViewModel);
-//        Bundle args = new Bundle();
-//        args.putParcelable(ARG_PARAM, weatherModel);
-//        fragment.setArguments(args);
-//        return fragment;
-//    }
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // When not using ViewModel
-//        if (getArguments() != null) {
-//            //weatherModel = getArguments().getParcelable(ARG_PARAM);
-//        }
     }
 
     @Override
@@ -74,19 +55,6 @@ public class WeatherResponseFragment extends Fragment {
                 .load("https://openweathermap.org/img/w/" + weatherModel.getWeatherIcon() + ".png")
                 .override(300, 300)
                 .into(weatherIv);
-
-
-        // set values when not using ViewModel
-//        cityNameTv.setText("The weather of city " + weatherModel.cityName.toUpperCase());
-//        temperatureTv.setText(String.valueOf(weatherModel.weatherTemperature) + " \u2103");
-//        weatherDescriptionTv.setText(weatherModel.weatherDescription);
-//        latitudeTv.setText(weatherModel.latitude.toString() + "\u00B0");
-//        longitudeTv.setText(weatherModel.longitude.toString() + "\u00B0");
-//        Glide.with(this)
-//                .load("https://openweathermap.org/img/w/" + weatherModel.weatherIcon + ".png")
-//                .override(300, 300)
-//                .into(weatherIv);
-
         return view;
     }
 }

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "953747947625",
+    "project_id": "river-vigil-275519",
+    "storage_bucket": "river-vigil-275519.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:953747947625:android:8f025504a3f94f2f3222f8",
+        "android_client_info": {
+          "package_name": "com.example.firebaseexample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "953747947625-41ksh1qlqai9mpqisqjj0o7tdnqhacfe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA35ajQLWbeauv3z3kLYvcse_KinGCd89w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "953747947625-41ksh1qlqai9mpqisqjj0o7tdnqhacfe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

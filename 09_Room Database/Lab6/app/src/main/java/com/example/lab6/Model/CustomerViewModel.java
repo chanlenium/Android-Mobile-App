@@ -22,8 +22,6 @@ public class CustomerViewModel extends AndroidViewModel {
     private CustomerDao customerDao;    // reference to CustomerDao
     private MyDatabase db;  // reference to database
 
-    Intent intent;
-
     public CustomerViewModel(@NonNull Application application) {    // constructor
         super(application);
         // get instances for all references

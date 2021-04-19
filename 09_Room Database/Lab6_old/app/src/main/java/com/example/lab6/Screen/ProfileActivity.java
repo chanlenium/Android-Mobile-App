@@ -66,7 +66,7 @@ public class ProfileActivity extends AppCompatActivity {
                     Toast.makeText(getApplication(), "Update Done", Toast.LENGTH_SHORT).show();
 
                     final int[] count = {0};
-                    customerViewModel.getAllCustomers().observe(ProfileActivity.this, currentVal ->{
+                    customerViewModel.customerList.observe(ProfileActivity.this, currentVal ->{
                         count[0] = count[0] + 1;
                         for(Customer c : currentVal){
                             Log.d("profile", "ID : " + c.getId());

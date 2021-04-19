@@ -1,73 +1,48 @@
 package com.example.lab6.Model;
 
 import android.app.Application;
-import android.content.Intent;
-import android.util.Log;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.room.Room;
 
 import com.example.lab6.Database.CustomerDao;
 import com.example.lab6.Database.MyDatabase;
-import com.example.lab6.Screen.FeedbackActivity;
-import com.example.lab6.Screen.MainActivity;
 
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
 public class CustomerViewModel extends AndroidViewModel {
-    public LiveData<List<Customer>> customerList;   // reference to LiveData
-    private CustomerDao customerDao;    // reference to CustomerDao
-    private MyDatabase db;  // reference to database
+    private CustomerRepository repository;          // reference to CustomerRepository
+    private LiveData<List<Customer>> allCustomers;  // reference to LiveData
+    // UI를 업데이트 하고 싶으면 liveData를 UI에서(Activity or Fragment) observe함.
+    // query는 Repository에서 실행
 
     public CustomerViewModel(@NonNull Application application) {    // constructor
         super(application);
-        // get instances for all references
-        db = Room.databaseBuilder(application, MyDatabase.class, "customer").build();
-        customerDao = db.getCustomerDao();
-        customerList = customerDao.getAll();
+        repository = new CustomerRepository(application);
+        allCustomers = repository.getAll();
     }
 
     public void insert(Customer customer) {
-        new Thread(new Runnable() {
-            public void run() {
-                // code in a background
-                customerDao.insert(customer);   // add new Customer
-            }
-        }).start();
+        repository.insert(customer);
     }
 
     public Customer getCustomer(String customerName) throws InterruptedException {
-        final CountDownLatch latch = new CountDownLatch(1);
-        final Customer[] customer = new Customer[1];
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                customer[0] = customerDao.getCustomer(customerName);
-                latch.countDown(); // Release await() in the test thread.
-            }
-        }).start();
-        latch.await(); // Wait for countDown() in the UI thread. Or could uiThread.join();
-        return customer[0];
+        return repository.getCustomer(customerName);
     }
 
     public void update(Customer customer) {
-        new Thread(new Runnable() {
-            public void run() {
-                // code in a background
-                customerDao.update(customer);   // add new Customer
-            }
-        }).start();
+        repository.update(customer);
     }
 
     public void delete(Customer customer) {
-        new Thread(new Runnable() {
-            public void run() {
-                // code in a background
-                customerDao.delete(customer);   // add new Customer
-            }
-        }).start();
+        repository.delete(customer);
+    }
+
+    public LiveData<List<Customer>> getAllCustomers(){
+        return allCustomers;
     }
 }

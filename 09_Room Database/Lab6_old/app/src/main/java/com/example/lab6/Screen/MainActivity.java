@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText customerNameEt;    // reference to UI customer name
     private RatingBar ratingBar;        // reference to UI ratingbar
     private TextView commentLine;       // reference to UI commentLine
-    private CustomerViewModel customerViewModel;    // reference to ViewModel
+    private CustomerViewModel model;    // reference to ViewModel
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,17 +37,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // creating viewModel object
-        customerViewModel = new ViewModelProvider(this).get(CustomerViewModel.class);
+        model = new ViewModelProvider(this).get(CustomerViewModel.class);
         initUI();   // UI initialization
 
         // Since model.customerList is "LiveData" by executing customerDao.getAll()
         // observer can update its state whenever the value of model.customerList is changed
-        customerViewModel.getAllCustomers().observe(this, currentValue -> {
-            for(Customer customer : currentValue){
-                Log.d("Main", "ID : " + customer.getId());
-                Log.d("Main", "Name : " + customer.getName());
-                Log.d("Main", "Rating : " + customer.getRating());
-                Log.d("Main", "Comment : " + customer.getComment());
+        model.customerList.observe(this, new Observer<List<Customer>>() {
+            @Override
+            public void onChanged(List<Customer> customers) {
+                // Whenever the value of model.customerList is changed, the App prints its elements
+                for(Customer customer : customers){
+                    Log.d("Main", "ID : " + customer.getId());
+                    Log.d("Main", "Name : " + customer.getName());
+                    Log.d("Main", "Rating : " + customer.getRating());
+                    Log.d("Main", "Comment : " + customer.getComment());
+                }
             }
         });
     }
@@ -68,13 +72,13 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "All fields must be filled", Toast.LENGTH_SHORT).show();
         }else{
             // check input user is already in a list or not
-            Customer searchedCustomer = customerViewModel.getCustomer(name);
+            Customer searchedCustomer = model.getCustomer(name);
             if(searchedCustomer != null){
                 Toast.makeText(this, "This user is already registered", Toast.LENGTH_SHORT).show();
             }else{
                 // if input user is a new user, the app create user object and insert the user into a DB
                 Customer customer = new Customer(name, rating, comment);
-                customerViewModel.insert(customer);
+                model.insert(customer);
 
                 // clear UI elements
                 customerNameEt.setText("");
@@ -105,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
         if(id == R.id.pageMenuOption){
             Intent intent = new Intent(this, FeedbackActivity.class);   // explicit intent
-            customerViewModel.getAllCustomers().observe(this, currentValue -> {
+            model.customerList.observe(this, currentValue -> {
                 intent.putParcelableArrayListExtra("FeedbackPage", (ArrayList<? extends Parcelable>) currentValue);
             });
             startActivity(intent);

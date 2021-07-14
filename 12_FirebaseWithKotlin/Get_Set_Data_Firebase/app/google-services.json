@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1046171101369",
+    "project_id": "get-and-set-data-of-empl-e03c7",
+    "storage_bucket": "get-and-set-data-of-empl-e03c7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1046171101369:android:f76a9cdf9e4e31bbec5368",
+        "android_client_info": {
+          "package_name": "com.example.get_set_data_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1046171101369-sf2jqiqrce1j57504eabfc0u484f9dht.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFRRFrcubCqF58KbYeQbVXmhdZxaKfJMQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1046171101369-sf2jqiqrce1j57504eabfc0u484f9dht.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
